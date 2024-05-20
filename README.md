@@ -1,4 +1,4 @@
-# Colourway *Your Colour Analysts*
+# Slidles *Solve a simple puzzle by sliding tiles*
 ![Mock-Up](docs/images/mockup/slidles-mockup.webp)
 
 Welcome to SLIDLES.
