@@ -23,3 +23,63 @@ body {
    text-align: center;
    margin: 5px;
 }
+
+.logo img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    padding: 20px 20px 10px 20px;
+}
+
+/* Start button */
+.button-start a {
+    background-color: #252525;
+    border: 0.5px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+    color: #ffffff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 20px;
+    padding: 8px 18px;
+    transition: all 200ms ease;
+    text-decoration: none;
+ }
+ 
+ 
+ .button-start:hover a {
+    background: #A8CD6E;
+    border: 0.5px solid #ffffff;
+    color: #252525;
+    text-decoration: none;
+ }
+
+ /* Switch button */
+.button-start a {
+    background-color: #252525;
+    border: 0.5px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+    color: #ffffff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 20px;
+    padding: 8px 18px;
+    transition: all 200ms ease;
+    text-decoration: none;
+ }
+ 
+ 
+ .button-start:hover a {
+    background: #A8CD6E;
+    border: 0.5px solid #ffffff;
+    color: #252525;
+    text-decoration: none;
+ }
+ 
