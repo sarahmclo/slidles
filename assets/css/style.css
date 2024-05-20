@@ -24,12 +24,24 @@ body {
    margin: 5px;
 }
 
+/* Main content styles */
+main {
+    flex: 1; /* Grow to fill remaining space */
+ }
+
 .logo img {
     width: 100%;
     height: auto;
     max-width: 500px;
     padding: 20px 20px 10px 20px;
 }
+ 
+ #puzzle {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    padding: 0px 20px 0px 20px;
+ }
 
 /* Start button */
 .button-start a {
@@ -82,13 +94,24 @@ body {
     text-decoration: none;
  }
 
+.theme {
+    padding-top: 20px;
+}
+
  /*Footer*/
  #social-networks {
     display: flex;
     font-size: 28px;
     list-style-type: none;
-    justify-content: space-between;
-    gap: 40px;
+    justify-content: space-evenly;
+    gap: 25px;
+    padding-top: 40px;
+ }
+
+ .copyright {
+    color: #252525;
+    font-size: 12px;
+    padding: 5px 0 10px 0;
  }
 
  /* Disable colour on a tag when visited (for testing) */
