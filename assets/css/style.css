@@ -36,6 +36,19 @@ main {
     padding: 20px 20px 10px 20px;
 }
  
+.timer-moves-audio-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0px 20px;
+}
+
+.volume-icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
  #puzzle {
     width: 100%;
     height: auto;
