@@ -75,11 +75,28 @@ body {
     text-decoration: none;
  }
  
- 
  .button-start:hover a {
     background: #A8CD6E;
     border: 0.5px solid #ffffff;
     color: #252525;
     text-decoration: none;
  }
+
+ /*Footer*/
+ #social-networks {
+    display: flex;
+    font-size: 28px;
+    list-style-type: none;
+    justify-content: space-between;
+    gap: 40px;
+ }
+
+ /* Disable colour on a tag when visited (for testing) */
+a,
+a:visited,
+a:hover,
+a:active {
+   color: inherit;
+}
+
  
