@@ -15,7 +15,6 @@ Shields.io badges
     - [Site Owner Goals](#site-owner-goals)
     - [First Time User Goals](#first-time-user-goals)
     - [Return User Goals](#return-user-goals)
-    - [UX Research Survey](#ux-research-survey)
 2. [Design](#design)
     - [Design Philosophy](#design-philosophy)
     - [Design Choices](#design-choices)
@@ -126,16 +125,17 @@ The fonts for this site were carefully chosen and imported from [Google Fonts](h
 Wireframes serve as the blueprint for the website, outlining the layout and functionality of each page. They help us visualise the user experience and iterate on design concepts and scope before implementation. 
 
 Sketches
+![wireframe-sketches](docs/wireframes/wireframe-sketch.webp)
 
 Wireframes for this site were created with [Figma](https://figma.com/).
 
-- **Index Page Wireframes**
+- **Mobile Wireframes**
 
-![wireframe-index](docs/images/wireframes/pp1-index-wireframe.webp)
+![wireframe-mobile](docs/wireframes/mobile-wireframe.webp)
 
-- **Subscribed Page Wireframes**
+- **Desktop Page Wireframes**
 
-![wireframe-subscribed](docs/images/wireframes/pp1-subscribed-wireframe.webp)
+![wireframe-mobile](docs/wireframes/desktop-wireframe.webp)
 
 ### Structure
 
