@@ -57,7 +57,7 @@ footer {
     max-width: 500px;
 }
 
-.volume-icon {
+#volume-icon {
     display: flex;
     width: 25px;
     height: 25px;
