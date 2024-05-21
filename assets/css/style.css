@@ -1,7 +1,6 @@
 /* Google fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 /* Asterisk wildcard selector to override default styles added by browser */
 * {
    box-sizing: border-box;
@@ -57,7 +56,6 @@ h4 {
    display: flex;
    gap: 10px;
    /* Optional: Adjust spacing between timer and moves */
-
 }
 
 .audio {
@@ -173,14 +171,14 @@ ol {
    text-align: center;
 }
 
-.button-start:hover a {
+.button-start:hover a, .button-switch:hover a, .button-hint:hover a {
    background: #A8CD6E;
    border: 0.5px solid #ffffff;
    color: #252525;
    text-decoration: none;
 }
 
-.button-switch a {
+.button-switch a, .button-hint a {
    background-color: #252525;
    border: 0.5px solid #ffffff;
    border-radius: 20px;
@@ -188,44 +186,14 @@ ol {
    color: #ffffff !important;
    cursor: pointer;
    display: inline-block;
-   font-size: 16px;
    font-weight: 400;
-   line-height: 20px;
+   line-height: 40px; /* Vertically center text */
    margin-top: 10px;
-   padding: 8px 18px;
    transition: all 200ms ease;
    text-decoration: none;
-}
-
-.button-switch:hover a {
-   background: #A8CD6E;
-   border: 0.5px solid #ffffff;
-   color: #252525;
-   text-decoration: none;
-}
-
-.button-hint a {
-   background-color: #252525;
-   border: 0.5px solid #ffffff;
-   border-radius: 20px;
-   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
-   color: #ffffff !important;
-   cursor: pointer;
-   display: inline-block;
-   font-size: 16px;
-   font-weight: 400;
-   line-height: 20px;
-   margin-top: 10px;
-   padding: 8px 18px;
-   transition: all 200ms ease;
-   text-decoration: none;
-}
-
-.button-hint:hover a {
-   background: #A8CD6E;
-   border: 0.5px solid #ffffff;
-   color: #252525;
-   text-decoration: none;
+   width: 150px; /* Fixed width */
+   height: 40px; /* Fixed height */
+   text-align: center;
 }
 
 .theme {
