@@ -13,7 +13,7 @@ function togglePlay() {
     }
 }
 
-// Modal - adjusted to use click on image (not button) to open modal https://www.w3schools.com/howto/howto_css_modals.asp
+// Modal - source tutorial: https://www.w3schools.com/howto/howto_css_modals.asp adjusted to use click on image (not button) to open modal
 // Get the modal
 var modal = document.getElementById("myModal");
 

@@ -222,7 +222,7 @@ ol {
 .copyright {
    color: #252525;
    font-size: 12px;
-   padding: 5px 0 10px 0;
+   padding: 5px 20px 10px 20px;
 }
 
 /* Disable colour on a tag when visited (for testing) */
