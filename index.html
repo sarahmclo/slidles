@@ -31,27 +31,47 @@
     </a>
 
     <!-- Tagline -->
-    <h4>Solve a simple puzzle by sliding tiles</h4>
+    <h4>Slide tiles to solve a simple puzzle</h4>
 
     <!-- Main content -->
     <!-- Timer, moves counter -->
-    <div class="timer-moves-audio-container">
+    <div class="timer-moves-audio-info-container">
         <div>
-            <p class="timer-moves" >Time: 00:00  Moves: 0</p>
+            <p class="timer-moves">Time: 00:00 Moves: 0</p>
         </div>
         <div class="audio">
             <img id="volume-icon" onclick="togglePlay()" src="assets/images/vol-off.webp" alt="volume toggle">
             <audio src="assets/audio/carl-orff-gassenhauer-hans-neusiedler-180891.mp3"></audio>
         </div>
+        <!-- Trigger info modal -->
+    <img id="info-modal" src="assets/images/info-icon.webp" alt="information modal button"
+    aria-label="the letter i within a circle, an information graphic when clicked opens up how to play the puzzle">
+<!-- Info modal content-->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="assets/images/slidles_logo.webp" alt="slidles logo">
+        <h4>Slide tiles to solve puzzle and reveal today's imagery</h4><br>
+        <h4>How to Play:</h4>
+        <div class="how-to-play">
+            <ol>
+                <li>Click the "Start Slidles" button to begin puzzle.</li><br>
+                <li>Click/Tap on the tiles adjacent to empty space to slide them.</li><br>
+                <li>Arrange tiles to form the complete picture.</li><br>
+                <li>Keep an eye on the timer and moves counter to track your progress.</li><br>
+                <li>Click "Switch Slidles" button to change puzzle.</li><br>
+                <li>Click "Hint" button to view solved puzzle.</li><br>
+                <li>Play and pause music by clicking the volume icon.</li><br>
+                <li>Ready to solve today’s Slidles? Good Luck!</li>
+            </ol>
+        </div>
+    </div>
+</div>
     </div>
 
     <!-- Puzzle -->
     <img id="puzzle" src="assets/images/slidles_pink.webp" alt="Puzzle image"
         aria-label="Simple line drawing of a flamingo on a pink background">
-
-    <!-- Info Modal 
-        <img class="info" src="" alt="info button for how to play">
-        -->
 
     <!-- Start button -->
     <div class="button-start">
