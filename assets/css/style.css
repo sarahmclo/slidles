@@ -146,6 +146,7 @@ ol {
    cursor: pointer;
 }
 
+/* Puzzle */
 #puzzle {
    width: 100%;
    height: auto;
@@ -153,7 +154,7 @@ ol {
    padding: 5px 20px 0px 20px;
 }
 
-/* Start button */
+/* Buttons */
 .button-start a {
    background-color: #252525;
    border: 0.5px solid #ffffff;
@@ -162,13 +163,14 @@ ol {
    color: #ffffff !important;
    cursor: pointer;
    display: inline-block;
-   font-size: 16px;
    font-weight: 400;
-   line-height: 20px;
+   line-height: 40px; /* Vertically center text */
    margin-top: 20px;
-   padding: 8px 18px;
    transition: all 200ms ease;
    text-decoration: none;
+   width: 150px; /* Fixed width */
+   height: 40px; /* Fixed height */
+   text-align: center;
 }
 
 .button-start:hover a {
@@ -178,7 +180,6 @@ ol {
    text-decoration: none;
 }
 
-/* Switch button */
 .button-switch a {
    background-color: #252525;
    border: 0.5px solid #ffffff;
@@ -197,6 +198,30 @@ ol {
 }
 
 .button-switch:hover a {
+   background: #A8CD6E;
+   border: 0.5px solid #ffffff;
+   color: #252525;
+   text-decoration: none;
+}
+
+.button-hint a {
+   background-color: #252525;
+   border: 0.5px solid #ffffff;
+   border-radius: 20px;
+   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+   color: #ffffff !important;
+   cursor: pointer;
+   display: inline-block;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 20px;
+   margin-top: 10px;
+   padding: 8px 18px;
+   transition: all 200ms ease;
+   text-decoration: none;
+}
+
+.button-hint:hover a {
    background: #A8CD6E;
    border: 0.5px solid #ffffff;
    color: #252525;
