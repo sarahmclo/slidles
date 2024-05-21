@@ -232,3 +232,13 @@ a:hover,
 a:active {
    color: inherit;
 }
+
+/* Media query: tablets and larger (768px and up)*/
+@media screen and (min-width: 768px) {
+   /* Modal */
+   .modal {
+      width: 50%;
+      height: 100%;
+      right: 25%;
+   }
+}
