@@ -10,7 +10,8 @@
 
 /* General styles */
 body {
-   color: #252525;
+   color: #3f3f42;
+   ;
    display: flex;
    flex-direction: column;
    font-family: 'Montserrat', sans-serif;
@@ -21,7 +22,6 @@ body {
    align-items: center;
    justify-content: center;
    text-align: center;
-   margin: 5px;
 }
 
 /* Main content styles */
@@ -109,7 +109,6 @@ h4 {
    padding: 20px;
    border: 1px solid #888;
    width: 80%;
-   /* Could be more or less, depending on screen size */
 }
 
 .modal-logo {
@@ -129,9 +128,9 @@ ol {
    line-height: 20px;
 }
 
-/* The Close Button */
+/* Modal close button */
 .close {
-   color: #aaa;
+   color: #8f8d8d;
    float: right;
    font-size: 28px;
    font-weight: bold;
@@ -139,7 +138,8 @@ ol {
 
 .close:hover,
 .close:focus {
-   color: black;
+   color: #3f3f42;
+   ;
    text-decoration: none;
    cursor: pointer;
 }
@@ -153,8 +153,10 @@ ol {
 }
 
 /* Buttons */
-.button-start a {
-   background-color: #252525;
+.button-start a,
+.button-switch a,
+.button-hint a {
+   background-color: #3f3f42;
    border: 0.5px solid #ffffff;
    border-radius: 20px;
    box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
@@ -162,38 +164,39 @@ ol {
    cursor: pointer;
    display: inline-block;
    font-weight: 400;
-   line-height: 40px; /* Vertically center text */
+   line-height: 40px;
+   /* Vertically center text */
    margin-top: 20px;
    transition: all 200ms ease;
    text-decoration: none;
-   width: 150px; /* Fixed width */
-   height: 40px; /* Fixed height */
+   width: 140px;
+   /* Fixed width */
+   height: 40px;
+   /* Fixed height */
    text-align: center;
 }
 
-.button-start:hover a, .button-switch:hover a, .button-hint:hover a {
-   background: #A8CD6E;
-   border: 0.5px solid #ffffff;
-   color: #252525;
-   text-decoration: none;
-}
-
-.button-switch a, .button-hint a {
-   background-color: #252525;
-   border: 0.5px solid #ffffff;
-   border-radius: 20px;
-   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
-   color: #ffffff !important;
-   cursor: pointer;
-   display: inline-block;
-   font-weight: 400;
-   line-height: 40px; /* Vertically center text */
+.button-switch a,
+.button-hint a {
    margin-top: 10px;
-   transition: all 200ms ease;
+}
+
+.button-start:hover a,
+.button-switch:hover a,
+.button-hint:hover a {
+   background: #F3A0BC;
+   border: 0.5px solid #ffffff;
+   color: #3f3f42;
+   ;
    text-decoration: none;
-   width: 150px; /* Fixed width */
-   height: 40px; /* Fixed height */
-   text-align: center;
+}
+
+.button-switch:hover a {
+   background: #A8CD6E;
+}
+
+.button-hint:hover a {
+   background: #F2DD4E;
 }
 
 .theme {
@@ -204,6 +207,8 @@ ol {
 
 /*Footer*/
 #social-networks {
+   color: #3f3f42;
+   ;
    display: flex;
    font-size: 28px;
    list-style-type: none;
@@ -228,10 +233,24 @@ a:active {
 
 /* Media query: tablets and larger (768px and up)*/
 @media screen and (min-width: 768px) {
+
    /* Modal */
    .modal {
       width: 50%;
       height: 100%;
       right: 25%;
+   }
+
+   /* Button */
+   #button-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+   }
+
+   .button-switch a,
+   .button-hint a {
+      margin-top: 20px;
    }
 }
