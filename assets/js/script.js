@@ -21,12 +21,41 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 
-  runGame("addition");
+  runGame("");
 
 });
 
- // Variables
- 
+// Switch button: change puzzle images
+ // Get the "Switch" button element
+const switchButton = document.querySelector('.switchButton');
+
+// Get the puzzle image element
+const puzzleImage = document.querySelector('#puzzle');
+
+// Store the paths to the 4 WebP images in an array
+const imagePaths = [
+  'assets/images/slidles_pink.webp',
+  'assets/images/slidles_black.webp',
+  'assets/images/slidles_yellow.webp',
+  'assets/images/slidles_white.webp'
+];
+
+// Initialize a variable to keep track of the current image index
+let currentImageIndex = 0;
+
+// Add a click event listener to the "Switch" button
+switchButton.addEventListener('click', () => {
+  // Increment the current image index
+  currentImageIndex++;
+
+  // If the current image index exceeds the length of the image paths array, wrap around to the first image
+  if (currentImageIndex === imagePaths.length) {
+    currentImageIndex = 0;
+  }
+
+  // Change the image source to the selected WebP image
+  puzzleImage.src = imagePaths[currentImageIndex];
+});
  
  // Functions
 
