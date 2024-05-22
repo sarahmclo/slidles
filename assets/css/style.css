@@ -11,7 +11,6 @@
 /* General styles */
 body {
    color: #3f3f42;
-   ;
    display: flex;
    flex-direction: column;
    font-family: 'Montserrat', sans-serif;
@@ -127,6 +126,10 @@ ol {
    list-style-type: none;
    font-size: 14px;
    line-height: 20px;
+   padding-bottom: 5px;
+}
+
+ol li {
    padding-bottom: 10px;
 }
 
@@ -154,7 +157,7 @@ ol {
 }
 
 /* Buttons */
-.button-start a,
+.button-play a,
 .button-switch a,
 .button-hint a {
    background-color: #3f3f42;
@@ -182,7 +185,7 @@ ol {
    margin-top: 10px;
 }
 
-.button-start:hover a,
+.button-play:hover a,
 .button-switch:hover a,
 .button-hint:hover a {
    background: #F3A0BC;
@@ -208,7 +211,6 @@ ol {
 /*Footer*/
 #social-networks {
    color: #3f3f42;
-   ;
    display: flex;
    font-size: 28px;
    list-style-type: none;
