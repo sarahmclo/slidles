@@ -1,4 +1,4 @@
-/* Google fonts import*/
+/* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Asterisk wildcard selector to override default styles added by browser */
@@ -55,7 +55,7 @@ h4 {
 .timer-moves {
    display: flex;
    gap: 10px;
-   /* Optional: Adjust spacing between timer and moves */
+   /* Adjust spacing between timer and moves */
 }
 
 .audio {
@@ -105,7 +105,7 @@ h4 {
 .modal-content {
    background-color: #fefefe;
    margin: 15% auto;
-   /* 15% from the top and centered */
+   /* 15% from top and centered */
    padding: 20px;
    border: 1px solid #888;
    width: 80%;
@@ -141,7 +141,6 @@ ol {
 .close:hover,
 .close:focus {
    color: #3f3f42;
-   ;
    text-decoration: none;
    cursor: pointer;
 }
@@ -189,7 +188,6 @@ ol {
    background: #F3A0BC;
    border: 0.5px solid #ffffff;
    color: #3f3f42;
-   ;
    text-decoration: none;
 }
 
