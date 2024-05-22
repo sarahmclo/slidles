@@ -114,11 +114,12 @@ h4 {
 .modal-logo {
    width: 200px;
    padding-top: 30px;
+   padding-bottom: 10px;
    height: auto;
 }
 
 hr {
-   margin: 5px;
+   margin: 10px 5px 10px 5px;
 }
 
 .how-to-play,
@@ -126,6 +127,7 @@ ol {
    list-style-type: none;
    font-size: 14px;
    line-height: 20px;
+   padding-bottom: 10px;
 }
 
 /* Modal close button */
