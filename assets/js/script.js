@@ -1,5 +1,38 @@
+// Wait for DOM to finish loading before running puzzle
+// Get button elements and add event listeners
+
+document.addEventListener("DOMContentLoaded", function () {
+  let buttons = document.getElementsByTagName("button-container");
+
+  for (let button of buttons) {
+      button.addEventListener("click", function () {
+          if (this.getAttribute("data-type") === "submit") {
+              checkAnswer();
+          } else {
+              let gameType = this.getAttribute("data-type");
+              runGame(gameType);
+          }
+      });
+  }
+
+  document.getElementById("answer-box").addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+          checkAnswer();
+      }
+  });
+
+  runGame("addition");
+
+});
+
+ // Variables
+ 
+ 
+ // Functions
+
+
 /** Audio */
-// Toggle On Off https://stackoverflow.com/questions/55018585/how-to-turn-on-audio-on-click-icon-play-pause
+// Toggle On/Off - adapted from tutorial: https://stackoverflow.com/questions/55018585/how-to-turn-on-audio-on-click-icon-play-pause
 function togglePlay() {
   let audio = document.getElementsByTagName("audio")[0];
   if (audio) {
@@ -13,7 +46,8 @@ function togglePlay() {
   }
 }
 
-// Modal - source tutorial: https://www.w3schools.com/howto/howto_css_modals.asp adjusted to use click on image (not button) to open modal
+/** Modal */
+// Modal - adapted from tutorial: https://www.w3schools.com/howto/howto_css_modals.asp adjusted to use click on image (not button) to open modal
 // Get the modal
 var modal = document.getElementById("myModal");
 
