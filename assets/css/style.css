@@ -157,9 +157,9 @@ ol li {
 }
 
 /* Buttons */
-.button-play a,
-.button-switch a,
-.button-hint a {
+.playButton,
+.switchButton,
+.hintButton {
    background-color: #3f3f42;
    border: 0.5px solid #ffffff;
    border-radius: 20px;
@@ -167,6 +167,7 @@ ol li {
    color: #ffffff !important;
    cursor: pointer;
    display: inline-block;
+   font-size: 18px;
    font-weight: 400;
    line-height: 40px;
    /* Vertically center text */
@@ -177,28 +178,28 @@ ol li {
    /* Fixed width */
    height: 40px;
    /* Fixed height */
-   text-align: center;
+   text-align: center;;
 }
 
-.button-switch a,
-.button-hint a {
+.switchButton,
+.hintButton {
    margin-top: 10px;
 }
 
-.button-play:hover a,
-.button-switch:hover a,
-.button-hint:hover a {
+.playButton:hover,
+.switchButton:hover,
+.hintButton:hover {
    background: #F3A0BC;
    border: 0.5px solid #ffffff;
    color: #3f3f42;
    text-decoration: none;
 }
 
-.button-switch:hover a {
+.switchButton:hover {
    background: #A8CD6E;
 }
 
-.button-hint:hover a {
+.hintButton:hover {
    background: #F2DD4E;
 }
 
@@ -251,8 +252,8 @@ a:active {
       gap: 15px;
    }
 
-   .button-switch a,
-   .button-hint a {
+   .switchButton,
+   .hintButton {
       margin-top: 20px;
    }
 }
