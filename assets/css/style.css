@@ -154,9 +154,22 @@ ol li {
    height: auto;
    max-width: 500px;
    padding: 5px 20px 0px 20px;
+   display: flex;
 }
 
 /* Buttons */
+.playButton-container {
+   text-align: center;
+   margin-top: 20px;
+}
+
+.switchHintButton-container {
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   margin-top: 10px;
+}
+
 .playButton,
 .switchButton,
 .hintButton {
@@ -171,7 +184,6 @@ ol li {
    font-weight: 400;
    line-height: 40px;
    /* Vertically center text */
-   margin-top: 20px;
    transition: all 200ms ease;
    text-decoration: none;
    width: 140px;
@@ -179,11 +191,6 @@ ol li {
    height: 40px;
    /* Fixed height */
    text-align: center;;
-}
-
-.switchButton,
-.hintButton {
-   margin-top: 10px;
 }
 
 .playButton:hover,
@@ -250,10 +257,10 @@ a:active {
       justify-content: space-between;
       align-items: center;
       gap: 15px;
+      margin-top: 10px;
    }
 
-   .switchButton,
-   .hintButton {
-      margin-top: 20px;
+   .playButton-container {
+      margin-top: 10px;
    }
 }
