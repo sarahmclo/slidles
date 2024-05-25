@@ -47,7 +47,7 @@ h4 {
    align-items: center;
    padding: 20px 20px 0px 20px;
    width: 100%;
-   max-width: 500px;
+   max-width: 400px;
    box-sizing: border-box;
 }
 
@@ -148,9 +148,9 @@ ol li {
    cursor: pointer;
 }
 
-/* Puzzle */
-/* CSS grid styles */
-grid-container {
+/* Puzzle
+/* CSS Grid Styling */
+.grid-container {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    /* 3 equal columns */
@@ -164,6 +164,7 @@ grid-container {
 
 .tile {
    width: 100%;
+   /* Occupy full width of its grid cell */
    height: 0;
    /* Set height to 0, content will determine height */
    padding-top: 100%;
@@ -176,59 +177,57 @@ grid-container {
    /* Ensure background images cover the entire tile */
 }
 
-.tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9 {
+.tile1,
+.tile2,
+.tile3,
+.tile4,
+.tile5,
+.tile6,
+.tile7,
+.tile8,
+.tile9 {
    width: 120px;
    height: 120px;
    background: url("../images/pink.webp");
    cursor: pointer;
 }
 
-/* Tile positions */
 .tile1 {
    background-position: left top;
 }
-
 
 .tile2 {
    background-position: center top;
 }
 
-
 .tile3 {
    background-position: right top;
 }
-
 
 .tile4 {
    background-position: left center;
 }
 
-
 .tile5 {
    background-position: center center;
 }
-
 
 .tile6 {
    background-position: right center;
 }
 
-
 .tile7 {
    background-position: left bottom;
 }
-
 
 .tile8 {
    background-position: center bottom;
 }
 
-
 .tile9 {
    background: white;
    cursor: default;
 }
-
 
 /* Buttons */
 #button-container {
@@ -239,7 +238,7 @@ grid-container {
    display: flex;
    justify-content: space-between;
    gap: 20px;
-   margin-top: 10px;
+   margin: 10px;
 }
 
 .playButton,
@@ -253,7 +252,6 @@ grid-container {
    cursor: pointer;
    display: inline-block;
    font-size: 18px;
-   font-weight: 400;
    line-height: 40px;
    /* Vertically center text */
    transition: all 200ms ease;
@@ -262,7 +260,8 @@ grid-container {
    /* Fixed width */
    height: 40px;
    /* Fixed height */
-   text-align: center;;
+   text-align: center;
+   ;
 }
 
 .playButton:hover,
@@ -282,10 +281,35 @@ grid-container {
    background: #F2DD4E;
 }
 
+#hintImageContainer {
+   display: none;
+   position: fixed;
+   top: 160px;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 9999;
+}
+
+#hintImage {
+   max-width: 100%;
+   max-height: 100%;
+   padding: 10px;
+}
+
+#overlay {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 9998;
+}
+
 .theme {
-   padding-top: 20px;
-   padding-left: 20px;
-   padding-right: 20px;
+   padding-top: 15px;
 }
 
 /*Footer*/
@@ -323,9 +347,9 @@ a:active {
       right: 25%;
    }
 
-   /* Button */
+   /* Button 
    #button-container {
-      display: flex;
+      /display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 15px;
@@ -333,6 +357,12 @@ a:active {
    }
 
    .playButton-container {
-      margin-top: 10px;
+   } */
+
+   /* Hint */
+   #hintImageContainer {
+      display: none;
+      position: fixed;
+      top: 170px;
    }
 }
