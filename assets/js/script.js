@@ -3,26 +3,10 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   let buttons = document.getElementsByTagName("button-container");
-
-  for (let button of buttons) {
-      button.addEventListener("click", function () {
-          if (this.getAttribute("data-type") === "submit") {
-              checkAnswer();
-          } else {
-              let gameType = this.getAttribute("data-type");
-              runGame(gameType);
-          }
-      });
-  }
-
-  document.getElementById("answer-box").addEventListener("keydown", function (event) {
-      if (event.key === "Enter") {
-          checkAnswer();
-      }
-  });
-
-  runGame("");
-
+//Play button
+  let playButton = document.getElementById("playButton")
+//Trigger click event for playButton
+playButton.click()
 });
 
 // Switch button: change puzzle images
@@ -34,10 +18,10 @@ const puzzleImage = document.querySelector('#puzzle');
 
 // Store the paths to the 4 WebP images in an array
 const imagePaths = [
-  'assets/images/slidles_pink.webp',
-  'assets/images/slidles_black.webp',
-  'assets/images/slidles_yellow.webp',
-  'assets/images/slidles_white.webp'
+  'assets/images/pink.webp',
+  'assets/images/black.webp',
+  'assets/images/yellow.webp',
+  'assets/images/white.webp'
 ];
 
 // Initialize a variable to keep track of the current image index
