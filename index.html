@@ -73,20 +73,37 @@
         </div>
     </div>
 
-    <!-- Puzzle -->
-    <img id="puzzle" src="assets/images/slidles_pink.webp" alt="Puzzle image"
-        aria-label="Simple line drawing of a flamingo on a pink background">
+    <!-- Puzzle CSS Grid -->
+    <div id="puzzle-container" class="grid-container">
+        <div id="cell11" class="tile tile1"></div>
+        <div id="cell12" class="tile tile2"></div>
+        <div id="cell13" class="tile tile3"></div>
+        <div id="cell21" class="tile tile4"></div>
+        <div id="cell22" class="tile tile5"></div>
+        <div id="cell23" class="tile tile6"></div>
+        <div id="cell31" class="tile tile7"></div>
+        <div id="cell32" class="tile tile8"></div>
+        <div id="cell33" class="tile tile9"></div>
+    </div>
 
     <!-- Buttons -->
     <div id="button-container">
         <div class="playButton-container">
-            <button class="playButton">Play</button>
+            <button class="playButton" onClick="shuffle();">Play</button>
         </div>
         <div class="switchHintButton-container">
-            <button class="switchButton">Switch</button>
+            <button class="switchButton" onClick="switchImage();">Switch</button>
             <button class="hintButton">Hint</button>
         </div>
     </div>
+
+    <!-- Hint Image -->
+    <div id="hintImageContainer">
+        <img id="hintImage" src="assets/images/hint.webp" alt="Hint image">
+    </div>
+ 
+    <!-- Overlay -->
+    <div id="overlay"></div>
 
     <!-- Today's theme -->
     <p class="theme">Today's puzzle theme: Birds & Colour</p>
