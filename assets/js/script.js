@@ -1,25 +1,28 @@
 // Wait for DOM to finish loading before running puzzle
-
-document.addEventListener("DOMContentLoaded", startGame);
-
+document.addEventListener("DOMContentLoaded", function () {
 //Get elements
 const tiles = document.querySelectorAll('.tile');
-const timerDisplay = document.getElementById('timer')
+const timerDisplay = document.getElementById('timer');
 const movesDisplay = document.getElementById('moves');
 const playButton = document.querySelector('.playButton');
 
 //Puzzle Variables
 let blankTileRow = 2; // Row index of the blank tile (0-based)
 let blankTileCol = 2; // Column index of the blank tile (0-based)
+let moves = 0; // Moves counter starts at 0
+let timerInterval;
+let seconds = 0;
+let minutes = 0;
+let gameStarted = false;
 
 // Function to shuffle tiles
 function shuffle() {
-  // Shuffle the tiles for 100 moves
+  // Shuffle the tiles for moves
   for (let i = 0; i < 100; i++) {
-      const directions = ['up', 'down', 'left', 'right'];
-      const randomIndex = Math.floor(Math.random() * 4);
-      const direction = directions[randomIndex];
-      moveTile(direction);
+    const directions = ['up', 'down', 'left', 'right'];
+    const randomIndex = Math.floor(Math.random() * 4);
+    const direction = directions[randomIndex];
+    moveTile(direction);
   }
 }
 
@@ -83,59 +86,48 @@ function swapTiles(row1, col1, row2, col2) {
   [tiles[tile1Index].className, tiles[tile2Index].className] = [tiles[tile2Index].className, tiles[tile1Index].className];
 }
 
-function clickTile(row, column) {
-  var cell = document.getElementById("cell" + row + column);
-  var tile = cell.className;
-  if (tile != "tile9") {
-    // Checking if white tile on the right
-    if (column < 3 && document.getElementById("cell" + row + (column + 1)).className == "tile9") {
-      swapTiles("cell" + row + column, "cell" + row + (column + 1));
-      return;
-    }
-    // Checking if white tile on the left
-    if (column > 1 && document.getElementById("cell" + row + (column - 1)).className == "tile9") {
-      swapTiles("cell" + row + column, "cell" + row + (column - 1));
-      checkPuzzleSolved();
-      return;
-    }
-    // Checking if white tile is above
-    if (row > 1 && document.getElementById("cell" + (row - 1) + column).className == "tile9") {
-      swapTiles("cell" + row + column, "cell" + (row - 1) + column);
-      checkPuzzleSolved();
-      return;
-    }
-    // Checking if white tile is below
-    if (row < 3 && document.getElementById("cell" + (row + 1) + column).className == "tile9") {
-      swapTiles("cell" + row + column, "cell" + (row + 1) + column);
-      checkPuzzleSolved();
-      return;
-    }
-  }
+// Function to reset the game
+function resetGame() {
+  // Reset the tiles to their initial positions without numbers
+  tiles.forEach((tile, index) => {
+    tile.textContent = ""; // Remove the numbers from tiles
+    tile.className = `tile tile${index + 1}`;
+  });
+
+  // Reset the blank tile position
+  blankTileRow = 2;
+  blankTileCol = 2;
+
+  // Reset the moves counter
+  moves = 0;
+  movesDisplay.textContent = moves;
+  gameStarted = false;
+
+  // Reset the timer
+  clearInterval(timerInterval);
+  seconds = 0;
+  minutes = 0;
+  timerDisplay.textContent = '0:00';
 }
-function checkPuzzleSolved() {
 
-  var expectedClass = "tile1";
-
-  for (var i = 1; i <= 8; i++) {
-
-    var cell = document.getElementById("cell" + Math.ceil(i / 3) + ((i - 1) % 3 + 1));
-
-    if (cell.className != expectedClass) {
-
-      return; // Puzzle not solved
+// Function to check if the puzzle is solved
+function isSolved() {
+  for (let i = 0; i < tiles.length; i++) {
+    if (tiles[i].textContent !== solution[i]) {
+      return false;
     }
-    expectedClass = "tile" + (i + 1);
   }
+  return true;
 }
 
 // Add event listeners to the tiles
 tiles.forEach((tile, index) => {
   tile.addEventListener('click', () => {
-      const row = Math.floor(index / 3);
-      const col = index % 3;
-      if (Math.abs(row - blankTileRow) + Math.abs(col - blankTileCol) === 1 && gameStarted) {
-          moveTile(getDirection(row, col));
-      }
+    const row = Math.floor(index / 3);
+    const col = index % 3;
+    if (Math.abs(row - blankTileRow) + Math.abs(col - blankTileCol) === 1 && gameStarted) {
+      moveTile(getDirection(row, col));
+    }
   });
 });
 
@@ -146,25 +138,25 @@ playButton.addEventListener('click', () => {
 
   // Start the timer when the game starts
   timerInterval = setInterval(() => {
-      seconds++;
-      if (seconds === 60) {
-          minutes++;
-          seconds = 0;
-      }
-      timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    seconds++;
+    if (seconds === 60) {
+      minutes++;
+      seconds = 0;
+    }
+    timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
   }, 1000);
 });
 
 // Function to get the direction of the move
 function getDirection(row, col) {
   if (row < blankTileRow) {
-      return 'up';
+    return 'up';
   } else if (row > blankTileRow) {
-      return 'down';
+    return 'down';
   } else if (col < blankTileCol) {
-      return 'left';
+    return 'left';
   } else {
-      return 'right';
+    return 'right';
   }
 }
 
@@ -172,10 +164,7 @@ function getDirection(row, col) {
 resetGame();
 });
 
-// Add event listener to the "Play" button
-document.querySelector(".playButton").addEventListener("click", shuffle);
-
-//Switch image
+//Switch puzzles
 let images = [
   "url('assets/images/pink-slidle.webp')",
   "url('assets/images/black-slidle.webp')",
@@ -243,7 +232,6 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
-;
 
 //* Modal for hint image */
 //Get the hint button element
