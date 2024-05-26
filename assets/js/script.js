@@ -1,11 +1,14 @@
 // Wait for DOM to finish loading before running puzzle
 
+//document.addEventListener("DOMContentLoaded", startGame);
+
 function startGame() {
+  console.log("startGame function called");
   shuffle();
-  enableTileClicks();
 }
 
 function enableTileClicks() {
+  console.log("enableTileClicks function called");
   var tiles = document.querySelectorAll(".tile");
   tiles.forEach((tile, index) => {
       tile.setAttribute("onclick", `clickTile(${Math.floor(index / 3) + 1}, ${(index % 3) + 1});`);
@@ -28,6 +31,7 @@ function shuffle() {
           swapTiles("cell" + row + column, "cell" + row2 + column2); // Swap the look & feel of both cells
       }
   }
+  enableTileClicks(); //Enable tile clicks after shuffling
 }
 
 function clickTile(row, column) {
@@ -56,6 +60,8 @@ function clickTile(row, column) {
       }
   }
 }
+// Add event listener to the "Play" button
+document.querySelector(".playButton").addEventListener("click", startGame);
 
 let images = [
   "url('assets/images/pink-slidle.webp')",
