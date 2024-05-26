@@ -1,11 +1,11 @@
 // Wait for DOM to finish loading before running puzzle
 
-//document.addEventListener("DOMContentLoaded", startGame);
+document.addEventListener("DOMContentLoaded", startGame);
 
-function startGame() {
-  console.log("startGame function called");
-  shuffle();
-}
+//function startGame() {
+  //console.log("startGame function called");
+  //shuffle();
+//}
 
 function enableTileClicks() {
   console.log("enableTileClicks function called");
@@ -46,23 +46,42 @@ function clickTile(row, column) {
       // Checking if white tile on the left
       if (column > 1 && document.getElementById("cell" + row + (column - 1)).className == "tile9") {
           swapTiles("cell" + row + column, "cell" + row + (column - 1));
+          checkPuzzleSolved();
           return;
       }
       // Checking if white tile is above
       if (row > 1 && document.getElementById("cell" + (row - 1) + column).className == "tile9") {
           swapTiles("cell" + row + column, "cell" + (row - 1) + column);
+          checkPuzzleSolved();
           return;
       }
       // Checking if white tile is below
       if (row < 3 && document.getElementById("cell" + (row + 1) + column).className == "tile9") {
           swapTiles("cell" + row + column, "cell" + (row + 1) + column);
+          checkPuzzleSolved();
           return;
       }
   }
 }
-// Add event listener to the "Play" button
-document.querySelector(".playButton").addEventListener("click", startGame);
+function checkPuzzleSolved() {
 
+  var expectedClass = "tile1";
+
+  for (var i = 1; i <= 8; i++) {
+
+      var cell = document.getElementById("cell" + Math.ceil(i / 3) + ((i - 1) % 3 + 1));
+
+      if (cell.className != expectedClass) {
+
+          return; // Puzzle not solved
+      }
+      expectedClass = "tile" + (i + 1);
+    }
+  }
+// Add event listener to the "Play" button
+document.querySelector(".playButton").addEventListener("click", shuffle);
+
+//Switch image
 let images = [
   "url('assets/images/pink-slidle.webp')",
   "url('assets/images/black-slidle.webp')",
