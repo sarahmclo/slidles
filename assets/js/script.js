@@ -10,7 +10,7 @@ function enableTileClicks() {
   tiles.forEach((tile, index) => {
       tile.setAttribute("onclick", `clickTile(${Math.floor(index / 3) + 1}, ${(index % 3) + 1});`);
   });
-
+}
 
 // Puzzle
 function swapTiles(cell1, cell2) {
@@ -124,7 +124,7 @@ function switchImage() {
         modal.style.display = "none";
     }
 };
-});
+;
 
   //* Modal for hint image */
   //Get the hint button element
