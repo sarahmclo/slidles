@@ -58,6 +58,11 @@ h4 {
    /* Adjust spacing between timer and moves */
 }
 
+#timer, #moves {
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 20px;
+}
+
 .audio {
    display: flex;
    align-items: center;
