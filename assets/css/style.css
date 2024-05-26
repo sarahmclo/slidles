@@ -255,7 +255,7 @@ ol li {
    cursor: pointer;
    display: inline-block;
    font-size: 18px;
-   font-weight: 100;
+   font-weight: 300;
    line-height: 40px;
    /* Vertically center text */
    transition: all 200ms ease;
