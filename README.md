@@ -1,7 +1,17 @@
 # Slidles *Solve a simple puzzle by sliding tiles*
+
 ![Mock-Up](docs/images/mockup/slidles-mockup.webp)
 
-Welcome to SLIDLES.
+Slidles is designed for those moments when you need a quick mental challenge to keep your brain engaged. This delightful puzzle game brings together the classic sliding tile puzzle with a modern, vibrant twist. Our goal is to provide an enjoyable and satisfying experience for players of all ages, whether you're looking to pass a few minutes or dive into a longer session of strategic thinking.
+
+Why Slidles?
+In a world brimming with complex and often overwhelming digital content, Slidles offers a refreshing escape. The simplicity of the sliding tile puzzle has been a beloved pastime for generations, and we've revitalized it with bright, vibrant graphics and an intuitive interface. This minimalist design ensures that the focus remains on the puzzle itself, providing a clean and distraction-free environment that promotes clarity and concentration.
+
+What to Expect
+Bright and Vibrant Design: Our color palette is chosen to be visually stimulating and pleasing, making every puzzle a feast for the eyes.
+Simple Yet Effective Interface: Navigate and play with ease, thanks to our user-friendly design that keeps things straightforward and enjoyable.
+Challenging Fun: Each puzzle is crafted to be engaging and rewarding, whether you're a novice or a seasoned puzzler.
+We invite you to immerse yourself in the world of Slidles, where every slide brings you closer to solving a beautifully designed puzzle. Happy sliding!
 
 [View Slidles Live Here](https://sarahmclo.github.io/.../)
 
@@ -23,15 +33,14 @@ Shields.io badges
     - [Imagery](#imagery)
     - [Wireframes](#wireframes)
     - [Structure](#structure)
-    - [The 5 Elements at COLOURWAY](#the-5-elements-at-colourway)
+    - [The 5 Elements](#the-5-elements)
 3. [Features](#features)
-    - [Logo and Navbar](#logo-and-navbar)
+    - [Logo](#logo)
     - [Favicon](#favicon)
-    - [Headings](#headings)
-    - [Pages](#pages)
-    - [Main Content](#main-content)
-    - [Subscribe Form](#subscribe-form)
-    - [Contact](#contact)
+    - [Timer](#timer)
+    - [Moves](#moves)
+    - [Audio](#audio)
+    - [Puzzle](#puzzle)
     - [Footer](#footer)
 4. [Technologies Utilised](#technologies-utilised)
     - [Languages](#languages)
@@ -53,42 +62,58 @@ Shields.io badges
 12. [Acknowledgements](#acknowledgements)
 
 ## User Experience (UX)<a name="user-experience"></a>
+Our primary focus is on creating a seamless, enjoyable user experience. Slidles is designed with simplicity in mind, ensuring that users can navigate and play without any hassle. The vibrant design elements enhance engagement, making the puzzle-solving experience delightful and satisfying.
 
-### Project Goals
+## User Experience (UX)
+Our primary focus is on creating a seamless, enjoyable user experience. Slidles is designed with simplicity in mind, ensuring that users can navigate and play without any hassle. The vibrant design elements enhance engagement, making the puzzle-solving experience delightful and satisfying.
 
-- Goals
+## Project Goals
+The main goals of the Slidles project are to:
+- Provide an accessible, engaging puzzle game for all ages.
+- Combine classic gameplay with a modern, visually appealing interface.
+- Ensure a smooth, intuitive user experience across all devices.
 
-### User Stories
+## User Stories
+- As a user, I want to easily understand how to play the game without needing extensive instructions.
+- As a user, I want the game to be challenging yet solvable, providing a sense of accomplishment.
+- As a user, I want the design to be visually appealing and not overwhelming.
 
-- Stories
+## Target Audience Goals
+- Enjoy a quick, engaging mental challenge during short breaks.
+- Experience a visually pleasing game that is easy to navigate.
+- Feel a sense of achievement after solving puzzles.
 
-### Target Audience Goals
+## Site Owner Goals
+- Attract and retain a broad audience with an engaging and well-designed puzzle game.
+- Create a community of users who return to the game regularly.
+- Ensure the site is easy to maintain and update with new features and puzzles.
 
-- Target
+## First Time User Goals
+- Quickly understand how to play the game.
+- Find the interface intuitive and the design appealing.
+- Enjoy the initial experience and feel motivated to return.
 
-### Site Owner Goals
-
-- Owner
-
-### First Time User Goals
-
-- First time
-
-### Return User Goals
-
-- Return
+## Return User Goals
+- Experience new puzzles and challenges to keep the game engaging.
+- Find improvements and updates that enhance the gameplay.
+- Feel a sense of progression and increasing skill.
 
 ## Design <a name="design"></a>
 
 ### Design Philosophy
+Our design philosophy centers on simplicity, vibrancy, and user engagement. We believe that a clean, aesthetically pleasing design enhances the user's focus on the puzzle itself.
 
 ### Design Choices
+- **Minimalist Layout**: Ensures the focus remains on the puzzle.
+- **Responsive Design**: Provides a seamless experience across all devices.
+- **Interactive Elements**: Engages users through dynamic feedback.
 
 - **Reference Images**
 
-![ref-pic](docs/images/references/....webp)
+![ref-pic](docs/references.webp)
 
 ### Colour Scheme
+A bright and vibrant color scheme is used to make the game visually stimulating. Colors are carefully chosen to create a balance between aesthetics and functionality.
 
 - **Colour Palette**
 The colour palette for this site was devised in keeping with the SLIDLES logo and created in [Adobe Color](https://color.adobe.com/).
@@ -98,10 +123,10 @@ The colour palette for this site was devised in keeping with the SLIDLES logo an
 - **Logo**
 The SLIDLES logo is an original creation using Adobe Illustrator and a starting point for the clean appearance of the puzzle game area.
 
-![Colour Logo](docs/images/logo/slidles-logo.webp)
+![Colour Logo](docs/slidles_logo.webp)
 
 ### Typography
-
+We use clear, easy-to-read fonts that complement the vibrant design without distracting from the gameplay.
 
 - **Fonts**
 The fonts for this site were carefully chosen and imported from [Google Fonts](https://fonts.google.com/).
@@ -110,10 +135,11 @@ The fonts for this site were carefully chosen and imported from [Google Fonts](h
 ![Monteserrat](docs/images/fonts/montserrat.webp)
 
 ### Imagery
+Minimal imagery is used, focusing on the tiles and the puzzle interface to keep the design clean and straightforward.
 
-- **Hero Image**
+- **Hero Images**
 
-![hero-image](assets/images/.webp)
+![hero-image](docs/hint.webp)
 
 - **Content Images**
  All images were optimised and converted to webp with [Convertio](https://convertio.co/).
@@ -122,7 +148,7 @@ The fonts for this site were carefully chosen and imported from [Google Fonts](h
 
 ### Wireframes
 
-Wireframes serve as the blueprint for the website, outlining the layout and functionality of each page. They help us visualise the user experience and iterate on design concepts and scope before implementation. 
+Wireframes serve as the blueprint for the website, outlining the layout and functionality of each page. They help us visualise the user experience and iterate on design concepts and scope before implementation.
 
 Sketches
 ![wireframe-sketch-mobile](docs/wireframes/wireframe-sketch-mobile.webp)
@@ -140,71 +166,96 @@ Wireframes for this site were created with [Figma](https://figma.com/).
 
 ### Structure
 
-- **Content Hierarchy:** Content is organized hierarchically to guide users through the website.
-- **Navigation:** The navigation structure, including menus, links, and calls-to-action buttons have been designed to facilitate easy access. The site is all on one page to enhance user experience and enhance flow.
-- **Page Structure:** The layout highlights key sections such as headers, main content area, form and footer. Each section contributes to the overall flow and functionality of the page.
-- **Grid System/Flexbox:** The layout of the website maintains consistency and alignment across pages and screen sizes.
-- **Consistency:** Consistency is emphasized in design elements such as typography, colours, lines and spacing, reinforcing UX and brand identity.
-- **Whitespace:** Negative space is utilised to improve readability and visual appeal. Strategically incorporating whitespace around elements helps create a clean and uncluttered design, just like the ethos of COLOURWAY.
-- **Responsive Design:** The design adapts to different screen sizes and devices to ensure a consistent and seamless UX. Fluid layouts, responsive images and media queries are used to achieve responsiveness throughout.
-- **Accessibility:** High focus on elements that make the site accessible to users with disabilities. Considerations such as colour contrast, keyboard navigation, aria labels, alt text for images and screen reader compatibility ensures inclusivity and compliance with accessibility standards.
-- **User Flow:** The design facilitates a smooth and intuitive user journey throughout.
+The structure of Slidles is designed for a seamless and intuitive user experience, with a clear content hierarchy, consistent navigation, and responsive design principles.
 
-## The 5 Elements at COLOURWAY
+### Content Hierarchy
+1. **Puzzle Area**: Central focus for gameplay.
+2. **Timer and Moves Counter**: Visible to track progress.
+3. **Navigation**: Easy access to new games, instructions, and settings.
+4. **Footer**: Essential links and information.
 
-1. **Strategy**
-- Conduct research to understand the needs and preferences of the target audience regarding colour analysis and aesthetics.
-- Analyse competitors' websites and UX strategies to identify strengths, weaknesses, and opportunities for differentiation.
-- Define the primary goals of the Colourway website, such as educating users about colour analysis, fostering a community, and promoting consultations/workshops/events.
+### Navigation
+- **Main Menu**: Links to start a game, instructions, and settings.
+- **Footer Links**: Additional resources and contact info.
 
-2. **Scope**
-- Determine the essential features and functionalities required to achieve the defined goals within the project timeline and budget.
-- Outline the types of content to be included on the website, such as articles, videos, workshops, and community forums.
-- Select the appropriate technologies and platforms for website development, ensuring compatibility with desired features and user experience standards.
+### Page Structure
+- **Header**: Logo and main navigation.
+- **Main Content**: Central puzzle area.
+- **Sidebar (if applicable)**: Game options and settings.
+- **Footer**: Secondary navigation and contact details.
 
-3. **Structure**
-- Information Architecture: Organize website content into logical categories and hierarchies to facilitate navigation and content discovery.
-- Navigation Design: Design a clear and intuitive navigation system, including menus, links, and calls-to-action, to guide users through the website effectively.
-- Content Layout: Determine the layout and placement of content elements, such as text, images, and videos, to optimize readability and visual appeal.
+### Grid System/Flexbox
+- **Flexbox**: Ensures responsive, adaptive layout.
+- **Dynamic Resizing**: Elements adjust based on screen size.
 
-4. **Skeleton**
-- Wireframing: Create wireframes/low-fidelity mockups of pages to visualize the layout and functionality.
-- Prototyping: Develop interactive prototypes to simulate the user experience and gather feedback from stakeholders and users.
-- Usability Testing: Conduct usability testing sessions with users to identify  issues, gather insights, and iterate on design improvements before final implementation.
+### Consistency
+- **Design Elements**: Uniform colors, typography, and imagery.
+- **Interaction**: Predictable behavior for interactive elements.
+- **Layout**: Consistent across pages and devices.
 
-5. **Surface**
-- Visual Design: Apply the chosen color palette, typography, and imagery to create a visually appealing and cohesive design that reflects the brand identity and resonate with the target audience.
-- UX/UI Elements: Design and implement user interface elements, such as buttons and formswith attention to detail and consistency to enhance usability and aesthetics.
-- Responsive Design: Ensure that the website is responsive and adapts seamlessly to various screen sizes and devices, providing a consistent and enjoyable user experience across desktops, tablets, and smartphones.
-- Interaction Design: Design elements to engage users, provide feedback, and enhance the overall experience for the return of users.
+### Whitespace
+- **Enhances Readability**: Avoids clutter and improves focus.
+- **Improves Navigation**: Clearly separates sections.
+
+### Responsive Design
+- **Mobile-Friendly**: Consistent experience on all devices.
+- **Touch-Friendly**: Effective touch inputs.
+
+### Accessibility
+- **Keyboard Navigation**: Fully functional via keyboard.
+- **Screen Reader Support**: Descriptive alt text and ARIA labels.
+- **Color Contrast**: High contrast for visual impairments.
+
+### User Flow
+1. **Landing Page**: Brief introduction to the game.
+2. **Game Start**: Immediate access to gameplay.
+3. **Gameplay**: Smooth interaction with visible progress.
+4. **Completion**: Clear feedback with options to start a new game or share.
+
+By focusing on these structural elements, Slidles provides an engaging, enjoyable, and accessible experience for all users.
+
+## ## Structure
+### The 5 Elements
+1. **Strategy**: Offering a classic puzzle game with a modern twist.
+2. **Scope**: Focusing on a single, well-designed puzzle game.
+3. **Structure**: Clear navigation and intuitive gameplay.
+4. **Skeleton**: Wireframes ensure a user-friendly layout.
+5. **Surface**: Bright, vibrant design elements create an engaging experience.
+
   
 ## Features <a name="features"></a>
 ![slidles-features](docs/wireframes/slidles-features.webp)
 
 ### Logo
+A simple, recognizable logo that reflects the game's playful and modern aesthetic.
 
 - **Logo**
 
 Our distinctive logo
 Logo designed in Illustrator and converted to webp with [Convertio](https://convertio.co/).
 
-![Logo](docs/images/logo/slidles-logo.webp)
+![Logo](docs/slidles_logo.webp)
 
 ### Favicon
 
-![Favicon](docs/images/logo/favicon-32x32.png)
+![Favicon](docs/slidles_icon.png)
 
 Original creation designed in Adobe Illustrator this custom favicon stems from the designed logo which enhances recognition and improves user experience by providing a visual marker for the puzzle. 
 
-### Pages:
+### Timer:
+Tracks the time taken to solve each puzzle, adding an element of challenge.
 
-### Headings:
+### Moves:
+Counts the number of moves made, encouraging strategic thinking.
 
-### Main Content:
+### Audio:
+Subtle sound effects enhance the interactive experience without being distracting.
 
 ### Puzzle:
+The core feature, designed to be engaging and rewarding, with varying levels of difficulty.
 
 ### Footer:
+Contains essential social media links and contact information.
 
 ## Technologies Utilised <a name="technologies-utilised"></a>
 
@@ -397,12 +448,10 @@ Our finished product is a testament to our dedication to providing a beautiful a
 
 ## Future Features <a name="future-features"></a>
 
-* Further content linked from Meet The Team section indicating what each person offers the user in terms of consultations.
-* More content exploring the nature of the seminars, workshops and newsletter.
-* Introduce a testimonial/reviews section by previous users.
-* Add javascript to logo palette element in mission section so than it spins and attracts the users attention.
-* Introduce a forum where users can interact with like-minded individuals.
-* Explore the possibility of paid partnerships with influencers to further the reach of the site and brand.
+- New puzzle levels and challenges.
+- Additional themes and color schemes.
+- Social sharing features to engage with friends.
+
 
 ## Credits <a name="credits"></a>
 
