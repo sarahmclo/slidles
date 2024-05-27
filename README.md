@@ -4,6 +4,12 @@
 
 [View Slidles Live Here](https://sarahmclo.github.io/slidles/)
 
+![GitHub last commit](https://img.shields.io/github/last-commit/sarahmclo/slidles)
+![GitHub language count](https://img.shields.io/github/languages/count/sarahmclo/slidles)
+![GitHub top language](https://img.shields.io/github/languages/top/sarahmclo/slidles)
+![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsarahmclo.github.io%2Fslidles%2F)
+
+
 Slidles is designed for those moments when you need a quick mental challenge to keep your brain engaged. This delightful puzzle game brings together the classic sliding tile puzzle with a modern, vibrant twist. Our goal is to provide an enjoyable and satisfying experience for players of all ages, whether you're looking to pass a few minutes or dive into a longer session of strategic thinking.
 
 Why Slidles?
