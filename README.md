@@ -9,19 +9,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/sarahmclo/slidles)
 ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsarahmclo.github.io%2Fslidles%2F)
 
-
-Slidles is designed for those moments when you need a quick mental challenge to keep your brain engaged. This delightful puzzle game brings together the classic sliding tile puzzle with a modern, vibrant twist. Our goal is to provide an enjoyable and satisfying experience for players of all ages, whether you're looking to pass a few minutes or dive into a longer session of strategic thinking.
-
-Why Slidles?
-In a world brimming with complex and often overwhelming digital content, Slidles offers a refreshing escape. The simplicity of the sliding tile puzzle has been a beloved pastime for generations, and we've revitalized it with bright, vibrant graphics and an intuitive interface. This minimalist design ensures that the focus remains on the puzzle itself, providing a clean and distraction-free environment that promotes clarity and concentration.
-
-What to Expect
-Bright and Vibrant Design: Our color palette is chosen to be visually stimulating and pleasing, making every puzzle a feast for the eyes.
-Simple Yet Effective Interface: Navigate and play with ease, thanks to our user-friendly design that keeps things straightforward and enjoyable.
-Challenging Fun: Each puzzle is crafted to be engaging and rewarding, whether you're a novice or a seasoned puzzler.
-We invite you to immerse yourself in the world of Slidles, where every slide brings you closer to solving a beautifully designed puzzle. Happy sliding!
-
-Shields.io badges
+Welcome to Slidles, a vibrant puzzle game designed to keep your brain engaged with quick, satisfying challenges. Slidles combines the classic sliding tile puzzle with a fresh, minimalist design, allowing for cleann and easy navigation to solve our simple puzzles. Escape the complexity of modern digital life fro a few minutes with our bright, eye-catching graphics and clean, intuitive interface. Slidles offers a refreshing experience for players of all ages. Each puzzle is engaging and rewarding, ensuring fun for both novice and seasoned puzzlers. Happy Sliding!
 
 ## Table of Contents
 1. [User Experience (UX)](#user-experience)
