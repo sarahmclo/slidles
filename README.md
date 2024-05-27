@@ -498,9 +498,10 @@ Our finished product is a testament to our dedication to providing a beautiful a
 
 ## Acknowledgements <a name="acknowledgements"></a>
  
+- Amy Richardson, my course facillitator.
 - Rahul Lakahanpal, my mentor.
-- Amy Richardson, my facillitator.
 - CI Tutor Support and Student Care.
-- All in the Slack community for resources and daily inspiration.
+- Slack community for resources and daily motivation.
 - Fellow course students for sharing.
-- Ozzy the dog for their eyes, ears, thoughts and testing.
+- My own childhood tile-sliding puzzle.
+- Ozzy the dog.
