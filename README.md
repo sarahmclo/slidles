@@ -2,14 +2,14 @@
 
 ![Mock-Up](docs/slidles-mockup.webp)
 
+Welcome to Slidles, a vibrant puzzle game designed to keep your brain engaged with quick, satisfying challenges. Slidles combines the classic sliding tile puzzle with a fresh, minimalist design, allowing for cleann and easy navigation to solve our simple puzzles. Escape the complexity of modern digital life fro a few minutes with our bright, eye-catching graphics and clean, intuitive interface. Slidles offers a refreshing experience for players of all ages. Each puzzle is engaging and rewarding, ensuring fun for both novice and seasoned puzzlers. Happy Sliding!
+
 [View Slidles Live Here](https://sarahmclo.github.io/slidles/)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/sarahmclo/slidles)
 ![GitHub language count](https://img.shields.io/github/languages/count/sarahmclo/slidles)
 ![GitHub top language](https://img.shields.io/github/languages/top/sarahmclo/slidles)
 ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsarahmclo.github.io%2Fslidles%2F)
-
-Welcome to Slidles, a vibrant puzzle game designed to keep your brain engaged with quick, satisfying challenges. Slidles combines the classic sliding tile puzzle with a fresh, minimalist design, allowing for cleann and easy navigation to solve our simple puzzles. Escape the complexity of modern digital life fro a few minutes with our bright, eye-catching graphics and clean, intuitive interface. Slidles offers a refreshing experience for players of all ages. Each puzzle is engaging and rewarding, ensuring fun for both novice and seasoned puzzlers. Happy Sliding!
 
 ## Table of Contents
 1. [User Experience (UX)](#user-experience)
