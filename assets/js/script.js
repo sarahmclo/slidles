@@ -1,167 +1,171 @@
 // Wait for DOM to finish loading before running puzzle
 document.addEventListener("DOMContentLoaded", function () {
-//Get elements
-const tiles = document.querySelectorAll('.tile');
-const timerDisplay = document.getElementById('timer');
-const movesDisplay = document.getElementById('moves');
-const playButton = document.querySelector('.playButton');
+  //Get elements
+  const tiles = document.querySelectorAll('.tile');
+  const timerDisplay = document.getElementById('timer');
+  const movesDisplay = document.getElementById('moves');
+  const playButton = document.querySelector('.playButton');
 
-//Puzzle Variables
-let blankTileRow = 2; // Row index of the blank tile (0-based)
-let blankTileCol = 2; // Column index of the blank tile (0-based)
-let moves = 0; // Moves counter starts at 0
-let timerInterval;
-let seconds = 0;
-let minutes = 0;
-let gameStarted = false;
+  //Puzzle Variables
+  let blankTileRow = 2; // Row index of the blank tile (0-based)
+  let blankTileCol = 2; // Column index of the blank tile (0-based)
+  let moves = 0; // Moves counter starts at 0
+  let timerInterval;
+  let seconds = 0;
+  let minutes = 0;
+  let gameStarted = false;
 
-// Function to shuffle tiles
-function shuffle() {
-  // Shuffle the tiles for moves
-  for (let i = 0; i < 100; i++) {
-    const directions = ['up', 'down', 'left', 'right'];
-    const randomIndex = Math.floor(Math.random() * 4);
-    const direction = directions[randomIndex];
-    moveTile(direction);
-  }
-}
-
-// Function to move a tile
-function moveTile(direction) {
-  let validMove = false;
-  switch (direction) {
-    case 'up':
-      if (blankTileRow > 0) {
-        swapTiles(blankTileRow, blankTileCol, blankTileRow - 1, blankTileCol);
-        blankTileRow--;
-        validMove = true;
-      }
-      break;
-    case 'down':
-      if (blankTileRow < 2) {
-        swapTiles(blankTileRow, blankTileCol, blankTileRow + 1, blankTileCol);
-        blankTileRow++;
-        validMove = true;
-      }
-      break;
-    case 'left':
-      if (blankTileCol > 0) {
-        swapTiles(blankTileRow, blankTileCol, blankTileRow, blankTileCol - 1);
-        blankTileCol--;
-        validMove = true;
-      }
-      break;
-    case 'right':
-      if (blankTileCol < 2) {
-        swapTiles(blankTileRow, blankTileCol, blankTileRow, blankTileCol + 1);
-        blankTileCol++;
-        validMove = true;
-      }
-      break;
+  // Function to shuffle tiles
+  function shuffle() {
+    // Shuffle the tiles for moves
+    for (let i = 0; i < 100; i++) {
+      const directions = ['up', 'down', 'left', 'right'];
+      const randomIndex = Math.floor(Math.random() * 4);
+      const direction = directions[randomIndex];
+      moveTile(direction);
+    }
   }
 
-  if (validMove && gameStarted) {
-    moves++;
+  // Function to move a tile
+  function moveTile(direction) {
+    let validMove = false;
+    switch (direction) {
+      case 'up':
+        if (blankTileRow > 0) {
+          swapTiles(blankTileRow, blankTileCol, blankTileRow - 1, blankTileCol);
+          blankTileRow--;
+          validMove = true;
+        }
+        break;
+      case 'down':
+        if (blankTileRow < 2) {
+          swapTiles(blankTileRow, blankTileCol, blankTileRow + 1, blankTileCol);
+          blankTileRow++;
+          validMove = true;
+        }
+        break;
+      case 'left':
+        if (blankTileCol > 0) {
+          swapTiles(blankTileRow, blankTileCol, blankTileRow, blankTileCol - 1);
+          blankTileCol--;
+          validMove = true;
+        }
+        break;
+      case 'right':
+        if (blankTileCol < 2) {
+          swapTiles(blankTileRow, blankTileCol, blankTileRow, blankTileCol + 1);
+          blankTileCol++;
+          validMove = true;
+        }
+        break;
+    }
+
+    if (validMove && gameStarted) {
+      moves++;
+      movesDisplay.textContent = moves;
+
+      //Audio slide-click
+      var clickSound = document.getElementById("slide-click-sound");
+      clickSound.currentTime = 0; // Reset the audio to the beginning
+      clickSound.play(); // Play the sound effect
+      // Check if the puzzle is solved after each move
+      if (isSolved()) {
+        // Display the "You solved Slidles!" message
+        alert("You solved Slidles!");
+
+        // Stop the timer
+        clearInterval(timerInterval);
+
+        // Reset the game
+        resetGame();
+      }
+    }
+  }
+
+  // Function to swap tiles
+  function swapTiles(row1, col1, row2, col2) {
+    const tile1Index = row1 * 3 + col1;
+    const tile2Index = row2 * 3 + col2;
+    [tiles[tile1Index].textContent, tiles[tile2Index].textContent] = [tiles[tile2Index].textContent, tiles[tile1Index].textContent];
+    [tiles[tile1Index].className, tiles[tile2Index].className] = [tiles[tile2Index].className, tiles[tile1Index].className];
+  }
+
+  // Function to reset the game
+  function resetGame() {
+    // Reset the tiles to their initial positions without numbers
+    tiles.forEach((tile, index) => {
+      tile.textContent = ""; // Remove the numbers from tiles
+      tile.className = `tile tile${index + 1}`;
+    });
+
+    // Reset the blank tile position
+    blankTileRow = 2;
+    blankTileCol = 2;
+
+    // Reset the moves counter
+    moves = 0;
     movesDisplay.textContent = moves;
+    gameStarted = false;
 
-    // Check if the puzzle is solved after each move
-    if (isSolved()) {
-      // Display the "You solved Slidles!" message
-      alert("You solved Slidles!");
-
-      // Stop the timer
-      clearInterval(timerInterval);
-
-      // Reset the game
-      resetGame();
-    }
+    // Reset the timer
+    clearInterval(timerInterval);
+    seconds = 0;
+    minutes = 0;
+    timerDisplay.textContent = '0:00';
   }
-}
 
-// Function to swap tiles
-function swapTiles(row1, col1, row2, col2) {
-  const tile1Index = row1 * 3 + col1;
-  const tile2Index = row2 * 3 + col2;
-  [tiles[tile1Index].textContent, tiles[tile2Index].textContent] = [tiles[tile2Index].textContent, tiles[tile1Index].textContent];
-  [tiles[tile1Index].className, tiles[tile2Index].className] = [tiles[tile2Index].className, tiles[tile1Index].className];
-}
+  // Function to check if the puzzle is solved
+  function isSolved() {
+    for (let i = 0; i < tiles.length; i++) {
+      if (tiles[i].textContent !== solution[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
 
-// Function to reset the game
-function resetGame() {
-  // Reset the tiles to their initial positions without numbers
+  // Add event listeners to the tiles
   tiles.forEach((tile, index) => {
-    tile.textContent = ""; // Remove the numbers from tiles
-    tile.className = `tile tile${index + 1}`;
+    tile.addEventListener('click', () => {
+      const row = Math.floor(index / 3);
+      const col = index % 3;
+      if (Math.abs(row - blankTileRow) + Math.abs(col - blankTileCol) === 1 && gameStarted) {
+        moveTile(getDirection(row, col));
+      }
+    });
   });
 
-  // Reset the blank tile position
-  blankTileRow = 2;
-  blankTileCol = 2;
+  // Add event listener to the play button
+  playButton.addEventListener('click', () => {
+    shuffle();
+    gameStarted = true;
 
-  // Reset the moves counter
-  moves = 0;
-  movesDisplay.textContent = moves;
-  gameStarted = false;
-
-  // Reset the timer
-  clearInterval(timerInterval);
-  seconds = 0;
-  minutes = 0;
-  timerDisplay.textContent = '0:00';
-}
-
-// Function to check if the puzzle is solved
-function isSolved() {
-  for (let i = 0; i < tiles.length; i++) {
-    if (tiles[i].textContent !== solution[i]) {
-      return false;
-    }
-  }
-  return true;
-}
-
-// Add event listeners to the tiles
-tiles.forEach((tile, index) => {
-  tile.addEventListener('click', () => {
-    const row = Math.floor(index / 3);
-    const col = index % 3;
-    if (Math.abs(row - blankTileRow) + Math.abs(col - blankTileCol) === 1 && gameStarted) {
-      moveTile(getDirection(row, col));
-    }
+    // Start the timer when the game starts
+    timerInterval = setInterval(() => {
+      seconds++;
+      if (seconds === 60) {
+        minutes++;
+        seconds = 0;
+      }
+      timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    }, 1000);
   });
-});
 
-// Add event listener to the play button
-playButton.addEventListener('click', () => {
-  shuffle();
-  gameStarted = true;
-
-  // Start the timer when the game starts
-  timerInterval = setInterval(() => {
-    seconds++;
-    if (seconds === 60) {
-      minutes++;
-      seconds = 0;
+  // Function to get the direction of the move
+  function getDirection(row, col) {
+    if (row < blankTileRow) {
+      return 'up';
+    } else if (row > blankTileRow) {
+      return 'down';
+    } else if (col < blankTileCol) {
+      return 'left';
+    } else {
+      return 'right';
     }
-    timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-  }, 1000);
-});
-
-// Function to get the direction of the move
-function getDirection(row, col) {
-  if (row < blankTileRow) {
-    return 'up';
-  } else if (row > blankTileRow) {
-    return 'down';
-  } else if (col < blankTileCol) {
-    return 'left';
-  } else {
-    return 'right';
   }
-}
 
-// Reset the game when the page loads
-resetGame();
+  // Reset the game when the page loads
+  resetGame();
 });
 
 //Switch puzzles
