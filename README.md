@@ -125,7 +125,8 @@ The fonts for this site were carefully chosen and imported from [Google Fonts](h
 Wireframes serve as the blueprint for the website, outlining the layout and functionality of each page. They help us visualise the user experience and iterate on design concepts and scope before implementation. 
 
 Sketches
-![wireframe-sketches](docs/wireframes/wireframe-sketch.webp)
+![wireframe-sketch-mobile](docs/wireframes/wireframe-sketch-mobile.webp)
+![wireframe-sketch-desktop](docs/wireframes/wireframe-sketch-desktop.webp)
 
 Wireframes for this site were created with [Figma](https://figma.com/).
 
@@ -135,7 +136,7 @@ Wireframes for this site were created with [Figma](https://figma.com/).
 
 - **Desktop Page Wireframes**
 
-![wireframe-mobile](docs/wireframes/desktop-wireframe.webp)
+![wireframe-devices](docs/wireframes/slidles-wireframes.webp)
 
 ### Structure
 
@@ -178,6 +179,7 @@ Wireframes for this site were created with [Figma](https://figma.com/).
 - Interaction Design: Design elements to engage users, provide feedback, and enhance the overall experience for the return of users.
   
 ## Features <a name="features"></a>
+![slidles-features](docs/wireframes/slidles-features.webp)
 
 ### Logo
 
@@ -280,6 +282,7 @@ To contribute or check the code, you can:
 ### Accessibility
 
 ### Lighthouse Testing
+![lightouse-testing](docs/bugs/testing/lighthouse-test.webp)
 
 ### Semantic HTML
 
