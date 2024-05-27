@@ -1,6 +1,8 @@
-# Slidles *Solve a simple puzzle by sliding tiles*
+# Slidles
 
-![Mock-Up](docs/images/mockup/slidles-mockup.webp)
+![Mock-Up](docs/slidles-mockup.webp)
+
+[View Slidles Live Here](https://sarahmclo.github.io/slidles/)
 
 Slidles is designed for those moments when you need a quick mental challenge to keep your brain engaged. This delightful puzzle game brings together the classic sliding tile puzzle with a modern, vibrant twist. Our goal is to provide an enjoyable and satisfying experience for players of all ages, whether you're looking to pass a few minutes or dive into a longer session of strategic thinking.
 
@@ -12,8 +14,6 @@ Bright and Vibrant Design: Our color palette is chosen to be visually stimulatin
 Simple Yet Effective Interface: Navigate and play with ease, thanks to our user-friendly design that keeps things straightforward and enjoyable.
 Challenging Fun: Each puzzle is crafted to be engaging and rewarding, whether you're a novice or a seasoned puzzler.
 We invite you to immerse yourself in the world of Slidles, where every slide brings you closer to solving a beautifully designed puzzle. Happy sliding!
-
-[View Slidles Live Here](https://sarahmclo.github.io/.../)
 
 Shields.io badges
 
@@ -224,7 +224,7 @@ By focusing on these structural elements, Slidles provides an engaging, enjoyabl
 
   
 ## Features <a name="features"></a>
-![slidles-features](docs/wireframes/slidles-features.webp)
+![slidles-features](docs/slidles-features.webp)
 
 ### Logo
 A simple, recognizable logo that reflects the game's playful and modern aesthetic.
@@ -452,10 +452,9 @@ Our finished product is a testament to our dedication to providing a beautiful a
 - Additional themes and color schemes.
 - Social sharing features to engage with friends.
 
-
 ## Credits <a name="credits"></a>
 
-### Content and Code
+### Frameworks, Content and Code
 
 * All text content written by myself for a fictional company and devised for educational purposes only.
 * [Code-Institute](https://codeinstitute.net/ie/?nab=0) Walkthrough projects content.
@@ -466,18 +465,17 @@ Our finished product is a testament to our dedication to providing a beautiful a
 * [Web Dev - Browser level image lazy loading](https://web.dev/browser-level-image-lazy-loading/) Lazy load images after testing.
 * [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) Flexbox tutorials.
 * [Codu](https://www.codu.co/) Inspiration.
-
-### Frameworks
-
 * [Gitpod](https://www.gitpod.io/) Write, commit and push code to GitHub. 
 * [GitHub](https://github.com/) Utilise for hosting, amending and viewing.
-* [Google Fonts](https://fonts.google.com/) Import carefully selected fonts.
-* [Balsamiq](https://balsamiq.com/) Create the detailed low-fidelity wireframes in the design phase.
+* [Figma](https://figma.com/) Create the detailed low-fidelity wireframes in the design phase.
+* [Codepen](https://codepen.io/) Practice code.
+* [JShint](https://jshint.com/) Javascript code validation and troubleshooting.
 * [Responsive Design Checker](https://responsivedesignchecker.com/) Test responsiveness on various devices.
 * [Am I Responsive](https://ui.dev/amiresponsive) Generate Mock Up Image of site in a responsive manner.
 * [Chrome DevTools](https://developer.chrome.com/docs/devtools) Utilised regularly in development for code review and to test responsiveness.
 * [Browserstack](https://www.browserstack.com/) Browserstack was utilised to test browser compatility across multiple devices.
 * [Shields.io](https://shields.io/) Shields.io used to create dynamic badges for Readme.
+* [Google Fonts](https://fonts.google.com/) Import carefully selected fonts.
 * [Coolers Contrast Checker](https://coolors.co/) Ensure colour contrast inline with guidelines.
 * [Adobe Colors](https://color.adobe.com/) Generate pleasing colour palette in keeping with logo and overall design.
 
@@ -494,9 +492,9 @@ Our finished product is a testament to our dedication to providing a beautiful a
 
 ## Acknowledgements <a name="acknowledgements"></a>
  
-- Rahul Lakahanpal, my mentor, for encouragement, keeping me on track and advising me what is important and when to move on!
-- Amy Richardson, my facillitator, for amazing resources, motivation and keeping me focused.
+- Rahul Lakahanpal, my mentor.
+- Amy Richardson, my facillitator.
 - CI Tutor Support and Student Care.
 - All in the Slack community for resources and daily inspiration.
 - Fellow course students for sharing.
-- Family and Ozzy the dog for their eyes, ears, thoughts and testing.
+- Ozzy the dog for their eyes, ears, thoughts and testing.
