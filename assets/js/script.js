@@ -64,15 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
       moves++;
       movesDisplay.textContent = moves;
 
-      // Preload the audio
-      var clickSound = new Audio("assets/audio/slide-click.mp3");
-
-      // Play the sound effect on click
-      document.addEventListener("click", function () {
-        clickSound.currentTime = 0; // Reset the audio to the beginning
-        clickSound.play(); // Play the sound effect
-      });
-
+      //Audio slide-click
+      var clickSound = document.getElementById("slide-click-sound");
+      clickSound.currentTime = 0; // Reset the audio to the beginning
+      clickSound.play(); // Play the sound effect
+      
       // Check if the puzzle is solved after each move
       if (isSolved()) {
         // Display the "You solved Slidles!" message
