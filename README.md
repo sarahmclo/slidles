@@ -126,8 +126,9 @@ We use clear, easy-to-read fonts that complement the vibrant design without dist
 - **Fonts**
 The fonts for this site were carefully chosen and imported from [Google Fonts](https://fonts.google.com/).
 
-![Helvetica Neue](docs/images/fonts/helveticaneue.webp)
-![Monteserrat](docs/images/fonts/montserrat.webp)
+![Monteserrat](docs/fonts/montserrat.png)
+![Helvetica Neue](docs/fonts/neue-helvetica.png)
+![Monospace](docs/fonts/monospace.png)
 
 ### Imagery
 Minimal imagery is used, focusing on the tiles and the puzzle interface to keep the design clean and straightforward.
@@ -139,7 +140,12 @@ Minimal imagery is used, focusing on the tiles and the puzzle interface to keep 
 - **Content Images**
  All images were optimised and converted to webp with [Convertio](https://convertio.co/).
 
-![content-images](docs/images/content-images.webp)
+![content-images](docs/puzzle-images/slidles_pink_sq.webp)
+![content-images](docs/puzzle-images/slidles_black_sq.webp)
+
+![content-images](docs/puzzle-images/slidles_yellow_sq.webp)
+![content-images](docs/puzzle-images/slidles_white_sq.webp)
+
 
 ### Wireframes
 
