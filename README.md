@@ -2,7 +2,7 @@
 
 ![Mock-Up](docs/slidles-mockup.webp)
 
-Welcome to Slidles, a vibrant puzzle game designed to keep your brain engaged with quick, satisfying challenges. Slidles combines the classic sliding tile puzzle with a fresh, minimalist design, allowing for cleann and easy navigation to solve our simple puzzles. Escape the complexity of modern digital life fro a few minutes with our bright, eye-catching graphics and clean, intuitive interface. Slidles offers a refreshing experience for players of all ages. Each puzzle is engaging and rewarding, ensuring fun for both novice and seasoned puzzlers. Happy Sliding!
+Welcome to Slidles, a vibrant puzzle game designed to keep your brain engaged with quick, satisfying challenges. Slidles combines the classic sliding tile puzzle with a fresh, minimalist design, allowing for clean and easy navigation to solve our simple puzzles. Escape the complexity of modern digital life for a few minutes with our bright, eye-catching graphics and clean, intuitive interface. Slidles offers a refreshing experience for players of all ages. Each puzzle is engaging and rewarding, ensuring fun for both novice and seasoned puzzlers. Happy Sliding!
 
 [View Slidles Live Here](https://sarahmclo.github.io/slidles/)
 
@@ -103,6 +103,7 @@ Our design philosophy centers on simplicity, vibrancy, and user engagement. We b
 - **Interactive Elements**: Engages users through dynamic feedback.
 
 - **Reference Images**
+For my sliding puzzle project, I've drawn inspiration from a blend of traditional sliding puzzles and the minimalist elegance of Pantone color swatches. The clean lines and abstract forms of Picasso's line drawings contribute to the aesthetic, while the engaging interactivity of New York Times games shapes the user experience. This fusion of artistic and functional elements creates a uniquely captivating and visually appealing puzzle game.
 
 ![ref-pic](docs/references.webp)
 
@@ -410,7 +411,7 @@ Throughout the development process, we encountered and resolved various bugs to 
 
 ## Finished Product <a name="finished-product"></a>
 
-Our finished product is a testament to our dedication to providing a beautiful and functional design that showcases the transformative power of colour. From the intuitive user experience to the vibrant visual identity, every aspect of our website reflects our commitment to excellence.
+Our Slidles puzzle combines the classic challenge of traditional sliding puzzles with the modern simplicity of Pantone color swatches and the artistic touch of Picasso line drawings. The engaging gameplay, inspired by New York Times games, offers a visually striking and mentally stimulating experience. Perfect for both casual gamers and puzzle enthusiasts, Slidles is a beautiful blend of art and play.
 
 <details>
 <summary>Index Page Desktop<a name="index-desktop"></a></summary>
@@ -428,18 +429,6 @@ Our finished product is a testament to our dedication to providing a beautiful a
 <summary>Index Page iPad<a name="index-iPad"></a></summary>
 
 ![ipad-index](docs/images/fin-site/colourway-ipad.webp)
-</details>
-
-<details>
-<summary>Subscribed Page Desktop<a name="subscribed-desktop"></a></summary>
-
-![desktop-subscribed](docs/images/fin-site/colourway-subscribed-desktop.webp)
-</details>
-
-<details>
-<summary>Subscribed Page Mobile<a name="subscribed-mobile"></a></summary>
-
-![mobile-subscribed](docs/images/fin-site/colourway-subscribed-mobile.webp)
 </details>
 
 ## Future Features <a name="future-features"></a>
@@ -485,6 +474,7 @@ Our finished product is a testament to our dedication to providing a beautiful a
 * [GoogleMaps](https://www.google.com/maps) Fictional location for company.
 
 ## Conclusion <a name="conclusion"></a>
+In conclusion, Slidles merges the timeless appeal of sliding puzzles with contemporary design elements, creating a visually captivating and intellectually engaging experience. Our aim is to offer a puzzle site that not only challenges the mind but also delights the senses, making it an ideal destination for both casual players and avid puzzle enthusiasts. Through Slidles, we strive to bring the joy of puzzles to a wider audience, blending art and entertainment in perfect harmony.
 
 ## Acknowledgements <a name="acknowledgements"></a>
  
