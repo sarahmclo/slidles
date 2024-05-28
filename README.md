@@ -318,19 +318,24 @@ To contribute or check the code, you can:
 ## Testing <a name="testing"></a>
 
 ### Validation Testing
-### HTML
+## HTML
+![mark-up-test1](docs/bugs/testing/markup-validation.webp)
 
-- **Index Page**
+- **Landing Page**
 
-### CSS
+## CSS
 
 - **Stylesheet**
+![css validation](docs/bugs/testing/css-validation.webp)
 
 ### Javascript
 
+- **Script**-
+![js hint](docs/bugs/testing/jshint1.png)
+
 ### Accessibility
 
-### Lighthouse Testing
+## Lighthouse Testing
 ![lightouse-testing](docs/bugs/testing/lighthouse-test.webp)
 
 ### Semantic HTML
@@ -395,6 +400,10 @@ Throughout the development process, we encountered and resolved various bugs to 
 
 ![css validation](docs/bugs/testing/css-validation.webp)
 
+- ### Javascript Validation Testing Bugs ###
+
+![css validation](docs/bugs/testing/jshint1.png)
+
 - ### Lighthouse Testing Bugs ###
 
 ![lighthouse-test1](docs/bugs/testing/lighthouse-test1.png)
@@ -440,19 +449,19 @@ Our Slidles puzzle combines the classic challenge of traditional sliding puzzles
 
 ### Frameworks, Content and Code
 
-* All text content written by myself for a fictional company and devised for educational purposes only.
+* All puzzle, text and imagery are original creations.
 * [Code-Institute](https://codeinstitute.net/ie/?nab=0) Walkthrough projects content.
 * [MDN](https://developer.mozilla.org/en-US/) Web docs and tutorials.
 * [StackOverflow](https://stackoverflow.com/) Troubleshooting code.
-* [W3Schools](https://www.w3schools.com/) Javascript intro tutorials for navbar menu.
+* [W3Schools](https://www.w3schools.com/) Javascript intro tutorials for audio and sound effects.
 * [CSS Tricks - HTML Picture](https://css-tricks.com) Further CSS tutorials.
-* [Web Dev - Browser level image lazy loading](https://web.dev/browser-level-image-lazy-loading/) Lazy load images after testing.
+* [Web Dev](https://web.dev.com) Tutorials in javascript and responsivity.
 * [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) Flexbox tutorials.
 * [Codu](https://www.codu.co/) Inspiration.
 * [Gitpod](https://www.gitpod.io/) Write, commit and push code to GitHub. 
 * [GitHub](https://github.com/) Utilise for hosting, amending and viewing.
 * [Figma](https://figma.com/) Create the detailed low-fidelity wireframes in the design phase.
-* [Codepen](https://codepen.io/) Practice code.
+* [Codepen](https://codepen.io/) Practice adn troubleshoot code ideas/bugs.
 * [JShint](https://jshint.com/) Javascript code validation and troubleshooting.
 * [Responsive Design Checker](https://responsivedesignchecker.com/) Test responsiveness on various devices.
 * [Am I Responsive](https://ui.dev/amiresponsive) Generate Mock Up Image of site in a responsive manner.
@@ -465,12 +474,12 @@ Our Slidles puzzle combines the classic challenge of traditional sliding puzzles
 
 ### Media
 
-* [Pexels](https://www.pexels.com/) Fictional team and company images.
-* [FontAwesome](https://fontawesome.com/) Icons for navbar menu, contact section and social networks.
-* [Favicon](https://favicon.io/) Created my own favicon with logo of page.
+* [Adobe Illustrator](https://www.adobe.com/) All original imagery created in Adobe Illustrator.
+* [FontAwesome](https://fontawesome.com/) Icons for social networks.
+* [Favicon](https://favicon.io/) Created my own favicon from logo.
 * [Convertio](https://convertio.co/document-converter/) Images converted to webp for optimal loading.
-* [Colour Theory Basics by Sarah Renae Clark](https://www.youtube.com/watch?v=YeI6Wqn4I78) Video content on colour theory.
-* [GoogleMaps](https://www.google.com/maps) Fictional location for company.
+* [Pixabay](https://www.pixabay.com) Audio (carl-orff-gassenhauer-hans-neusiedler-180891.mp3)and tile slide sound effect.
+* [The Noun Project](https://www.google.com/maps) Icons for info modal and volume on/off.
 
 ## Conclusion <a name="conclusion"></a>
 In conclusion, Slidles merges the timeless appeal of sliding puzzles with contemporary design elements, creating a visually captivating and intellectually engaging experience. Our aim is to offer a puzzle site that not only challenges the mind but also delights the senses, making it an ideal destination for both casual players and avid puzzle enthusiasts. Through Slidles, we strive to bring the joy of puzzles to a wider audience, blending art and entertainment in perfect harmony.
