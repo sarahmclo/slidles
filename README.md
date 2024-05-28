@@ -50,7 +50,6 @@ Welcome to Slidles, a vibrant puzzle game designed to keep your brain engaged wi
 9. [Future Features](#future-features)
 10. [Credits](#credits)
     - [Content and Code](#content-and-code)
-    - [Frameworks](#frameworks)
     - [Media](#media)
 11. [Conclusion](#conclusion)
 12. [Acknowledgements](#acknowledgements)
@@ -123,9 +122,9 @@ We use clear, easy-to-read fonts that complement the vibrant design without dist
 - **Fonts**
 The fonts for this site were carefully chosen and imported from [Google Fonts](https://fonts.google.com/).
 
-![Monteserrat](docs/fonts/montserrat.webp)
-![Helvetica Neue](docs/fonts/neue-helvetica.webp)
-![Monospace](docs/fonts/monospace.webp)
+<img src="docs/fonts/montserrat.webp" alt="montserrat" width="500">
+<img src="docs/fonts/neue-helvetica.webp" alt="neue-helvetica" width="500">
+<img src="docs/fonts/monospace.webp" alt="monospace" width="500">
 
 ### Imagery
 Minimal imagery is used, focusing on the tiles and the puzzle interface to keep the design clean and straightforward.
@@ -133,10 +132,8 @@ Minimal imagery is used, focusing on the tiles and the puzzle interface to keep 
 - **Content Hero Images**
  All images were optimised and converted to webp with [Convertio](https://convertio.co/).
 
-<img src="docs/puzzle-images/slidles_pink_sq.webp" alt="content-images" width="150">
-<img src="docs/puzzle-images/slidles_black_sq.webp" alt="content-images" width="150">
-<img src="docs/puzzle-images/slidles_yellow_sq.webp" alt="content-images" width="150">
-<img src="docs/puzzle-images/slidles_white_sq.webp" alt="content-images" width="150">
+<img src="docs/content-puzzle.webp" alt="content-images" width="700">
+
 
 ### Wireframes
 
@@ -238,18 +235,30 @@ Original creation designed in Adobe Illustrator this custom favicon stems from t
 
 ### Timer:
 Tracks the time taken to solve each puzzle, adding an element of challenge.
+<img src="docs/.webp" alt="timer" width="400">
 
 ### Moves:
 Counts the number of moves made, encouraging strategic thinking.
+<img src="docs/.webp" alt="moves" width="400">
 
 ### Audio:
-Subtle sound effects enhance the interactive experience without being distracting.
+Calming audio track with the ability ro be toggled of and on, starts muted.
+Subtle sound effects enhance the interactive experience.
+<img src="docs/.webp" alt="audio" width="400">
 
 ### Puzzle:
-The core feature, designed to be engaging and rewarding, with varying levels of difficulty.
+The core feature, designed to be fun, engaging and rewarding.
+<img src="docs/.webp" alt="puzzle" width="400">
+
+### Modals:
+Information Modal clearly outlining how to play the puzzle.
+Hint modal shows the complete puzzle
+<img src="docs/.webp" alt="info-modal" width="400">
+<img src="docs/.webp" alt="hint-modal" width="400">
 
 ### Footer:
 Contains essential social media links and contact information.
+<img src="docs/.webp" alt="footer" width="400">
 
 ## Technologies Utilised <a name="technologies-utilised"></a>
 
@@ -371,7 +380,7 @@ Content is logically organized and easy to navigate for users.
 There are no formatting issues or discrepancies in the placement of content elements.
 - **Accessibility Testing:** The website has been tested using accessibility tools to ensure compatibility and adherence to accessibility standards.
 Proper labeling, alt text for images, and other accessibility features have been included.
-- **Performance Testing:** The website's performance has been evaluated using tools like DevTools, WC3 Validator and Lighthouse to assess factors such as page load speed, performance metrics, and optimization opportunities.
+- **Performance Testing:** The website's performance has been evaluated using tools like DevTools, JS Hint, WC3 Validator and Lighthouse to assess factors such as page load speed, performance metrics, and optimization opportunities.
 
 ## Bugs and Fixes <a name="bugs-and-fixes"></a>
 
@@ -490,4 +499,4 @@ In conclusion, Slidles merges the timeless appeal of sliding puzzles with contem
 - My own childhood tile-sliding puzzle.
 - Ozzy the dog.
 
-[🔼 Back to top](#Table-of-contents)
+[🔼 Back to top](#Slidles)
