@@ -408,30 +408,26 @@ Throughout the development process, we encountered and resolved various bugs to 
 | Image elements do not have explicit width and height | Logo section | Chrome | Apple MacBook | Yes | Fix logo with specific dimensions |
 | Minimize third-party usage | Colour Theory video section | Chrome | Apple MacBook | Yes | Used mp4 video rather than linking to external site|
 
-**Google Styles Error**
-
-![css-validation](docs/images/testing/w3c_css_validation_GoogleStylesheetError_2024-04-16.png)
-
 ## Finished Product <a name="finished-product"></a>
 
 Our Slidles puzzle combines the classic challenge of traditional sliding puzzles with the modern simplicity of Pantone color swatches and the artistic touch of Picasso line drawings. The engaging gameplay, inspired by New York Times games, offers a visually striking and mentally stimulating experience. Perfect for both casual gamers and puzzle enthusiasts, Slidles is a beautiful blend of art and play.
 
 <details>
-<summary>Index Page Desktop<a name="index-desktop"></a></summary>
+<summary>Mobile<a name="mobile"></a></summary>
 
-![desktop-index](docs/images/fin-site/colourway-desktop.webp)
+![mobile-index](docs/mobile.png)
 </details>
 
 <details>
-<summary>Index Page Mobile<a name="index-mobile"></a></summary>
+<summary>Desktop<a name="desktop"></a></summary>
 
-![mobile-index](docs/images/fin-site/colourway-mobile.webp)
+![mobile-index](docs/desktop.png)
 </details>
 
 <details>
-<summary>Index Page iPad<a name="index-iPad"></a></summary>
+<summary>iPad<a name="iPad"></a></summary>
 
-![ipad-index](docs/images/fin-site/colourway-ipad.webp)
+![ipad-index](docs/iPad.png)
 </details>
 
 ## Future Features <a name="future-features"></a>
