@@ -112,7 +112,7 @@ A bright and vibrant color scheme is used to make the game visually stimulating.
 - **Colour Palette**
 The colour palette for this site was devised in keeping with the SLIDLES logo and created in [Adobe Color](https://color.adobe.com/).
 
-![Colour Palette](docs/images/logo/AdobeColor-color-theme_slidles.webp)
+<img src="docs/colour-palette.webp" width="500">
 
 - **Logo**
 The SLIDLES logo is an original creation using Adobe Illustrator and a starting point for the clean appearance of the puzzle game area.
