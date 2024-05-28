@@ -58,9 +58,6 @@ Welcome to Slidles, a vibrant puzzle game designed to keep your brain engaged wi
 ## User Experience (UX)<a name="user-experience"></a>
 Our primary focus is on creating a seamless, enjoyable user experience. Slidles is designed with simplicity in mind, ensuring that users can navigate and play without any hassle. The vibrant design elements enhance engagement, making the puzzle-solving experience delightful and satisfying.
 
-## User Experience (UX)
-Our primary focus is on creating a seamless, enjoyable user experience. Slidles is designed with simplicity in mind, ensuring that users can navigate and play without any hassle. The vibrant design elements enhance engagement, making the puzzle-solving experience delightful and satisfying.
-
 ## Project Goals
 The main goals of the Slidles project are to:
 - Provide an accessible, engaging puzzle game for all ages.
@@ -126,9 +123,9 @@ We use clear, easy-to-read fonts that complement the vibrant design without dist
 - **Fonts**
 The fonts for this site were carefully chosen and imported from [Google Fonts](https://fonts.google.com/).
 
-![Monteserrat](docs/fonts/montserrat.png)
-![Helvetica Neue](docs/fonts/neue-helvetica.png)
-![Monospace](docs/fonts/monospace.png)
+![Monteserrat](docs/fonts/montserrat.webp)
+![Helvetica Neue](docs/fonts/neue-helvetica.webp)
+![Monospace](docs/fonts/monospace.webp)
 
 ### Imagery
 Minimal imagery is used, focusing on the tiles and the puzzle interface to keep the design clean and straightforward.
@@ -136,23 +133,20 @@ Minimal imagery is used, focusing on the tiles and the puzzle interface to keep 
 - **Content Hero Images**
  All images were optimised and converted to webp with [Convertio](https://convertio.co/).
 
-<img src="docs/puzzle-images/slidles_pink_sq.webp" alt="content-images" width="200">
-<img src="docs/puzzle-images/slidles_black_sq.webp" alt="content-images" width="200">
-
-<img src="docs/puzzle-images/slidles_yellow_sq.webp" alt="content-images" width="200">
-<img src="docs/puzzle-images/slidles_white_sq.webp" alt="content-images" width="200">
+<img src="docs/puzzle-images/slidles_pink_sq.webp" alt="content-images" width="150">
+<img src="docs/puzzle-images/slidles_black_sq.webp" alt="content-images" width="150">
+<img src="docs/puzzle-images/slidles_yellow_sq.webp" alt="content-images" width="150">
+<img src="docs/puzzle-images/slidles_white_sq.webp" alt="content-images" width="150">
 
 ### Wireframes
 
 Wireframes serve as the blueprint for the website, outlining the layout and functionality of each page. They help us visualise the user experience and iterate on design concepts and scope before implementation.
 
-Sketches
+- **Sketch Wireframes**
 
 <img src="docs/wireframes/wireframe-sketch-mobile.webp" width="500">
 
 <img src="docs/wireframes/wireframe-sketch-desktop.webp" width="500">
-
-Wireframes for this site were created with [Figma](https://figma.com/).
 
 - **Mobile Wireframes**
 
@@ -161,6 +155,8 @@ Wireframes for this site were created with [Figma](https://figma.com/).
 - **Desktop Page Wireframes**
 
 ![wireframe-devices](docs/wireframes/slidles-wireframes.webp)
+
+Wireframes for this site were created with [Figma](https://figma.com/).
 
 ### Structure
 
@@ -212,7 +208,7 @@ The structure of Slidles is designed for a seamless and intuitive user experienc
 
 By focusing on these structural elements, Slidles provides an engaging, enjoyable, and accessible experience for all users.
 
-## ## Structure
+## Structure
 ### The 5 Elements
 1. **Strategy**: Offering a classic puzzle game with a modern twist.
 2. **Scope**: Focusing on a single, well-designed puzzle game.
@@ -236,7 +232,7 @@ Logo designed in Illustrator and converted to webp with [Convertio](https://conv
 
 ### Favicon
 
-<img src="docs/slidles_icon.png" alt="favicon" width="100">
+<img src="docs/slidles_icon.webp" alt="favicon" width="100">
 
 Original creation designed in Adobe Illustrator this custom favicon stems from the designed logo which enhances recognition and improves user experience by providing a visual marker for the puzzle. 
 
@@ -317,13 +313,13 @@ To contribute or check the code, you can:
 
 ## Testing <a name="testing"></a>
 
-### Validation Testing
-## HTML
+## Validation Testing
+### HTML
 ![mark-up-test1](docs/bugs/testing/markup-validation.webp)
 
 - **Landing Page**
 
-## CSS
+### CSS
 
 - **Stylesheet**
 ![css validation](docs/bugs/testing/css-validation.webp)
@@ -331,11 +327,11 @@ To contribute or check the code, you can:
 ### Javascript
 
 - **Script**-
-![js hint](docs/bugs/testing/jshint1.png)
+![js hint](docs/bugs/testing/jshint1.webp)
 
-### Accessibility
+## Accessibility
 
-## Lighthouse Testing
+### Lighthouse Testing
 ![lightouse-testing](docs/bugs/testing/lighthouse-test.webp)
 
 ### Semantic HTML
@@ -402,11 +398,11 @@ Throughout the development process, we encountered and resolved various bugs to 
 
 - ### Javascript Validation Testing Bugs ###
 
-![css validation](docs/bugs/testing/jshint1.png)
+![css validation](docs/bugs/testing/jshint1.webp)
 
 - ### Lighthouse Testing Bugs ###
 
-![lighthouse-test1](docs/bugs/testing/lighthouse-test1.png)
+![lighthouse-test1](docs/bugs/testing/lighthouse-test1.webp)
 
 - ### All Lighthouse Bugs Resolved ###
 
@@ -424,19 +420,19 @@ Our Slidles puzzle combines the classic challenge of traditional sliding puzzles
 <details>
 <summary>Mobile<a name="mobile"></a></summary>
 
-![mobile-index](docs/mobile.png)
+![mobile-index](docs/mobile.webp)
 </details>
 
 <details>
 <summary>Desktop<a name="desktop"></a></summary>
 
-![mobile-index](docs/desktop.png)
+![mobile-index](docs/desktop.webp)
 </details>
 
 <details>
 <summary>iPad<a name="iPad"></a></summary>
 
-![ipad-index](docs/iPad.png)
+![ipad-index](docs/iPad.webp)
 </details>
 
 ## Future Features <a name="future-features"></a>
@@ -447,7 +443,7 @@ Our Slidles puzzle combines the classic challenge of traditional sliding puzzles
 
 ## Credits <a name="credits"></a>
 
-### Frameworks, Content and Code
+### Content and Code
 
 * All puzzle, text and imagery are original creations.
 * [Code-Institute](https://codeinstitute.net/ie/?nab=0) Walkthrough projects content.
@@ -493,3 +489,5 @@ In conclusion, Slidles merges the timeless appeal of sliding puzzles with contem
 - Fellow course students for sharing.
 - My own childhood tile-sliding puzzle.
 - Ozzy the dog.
+
+[🔼 Back to top](#Table-of-contents)
