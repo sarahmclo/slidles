@@ -133,19 +133,14 @@ The fonts for this site were carefully chosen and imported from [Google Fonts](h
 ### Imagery
 Minimal imagery is used, focusing on the tiles and the puzzle interface to keep the design clean and straightforward.
 
-- **Hero Images**
-
-![hero-image](docs/hint.webp)
-
-- **Content Images**
+- **Content Hero Images**
  All images were optimised and converted to webp with [Convertio](https://convertio.co/).
 
-![content-images](docs/puzzle-images/slidles_pink_sq.webp)
-![content-images](docs/puzzle-images/slidles_black_sq.webp)
+<img src="docs/puzzle-images/slidles_pink_sq.webp" alt="content-images" width="200">
+<img src="docs/puzzle-images/slidles_black_sq.webp" alt="content-images" width="200">
 
-![content-images](docs/puzzle-images/slidles_yellow_sq.webp)
-![content-images](docs/puzzle-images/slidles_white_sq.webp)
-
+<img src="docs/puzzle-images/slidles_yellow_sq.webp" alt="content-images" width="200">
+<img src="docs/puzzle-images/slidles_white_sq.webp" alt="content-images" width="200">
 
 ### Wireframes
 
@@ -383,7 +378,7 @@ Throughout the development process, we encountered and resolved various bugs to 
 
 - ### Mark-up Validation Testing Bugs
 
-![mark-up-test1](docs/images/testing/markup-test1.webp)
+![mark-up-test1](docs/bugs/testing/markup-validation.webp)
 
 - ### All Mark-up Validation Bugs resolved
 
@@ -396,11 +391,15 @@ Throughout the development process, we encountered and resolved various bugs to 
 | Error: Element h4 is not allowed as child element of ul | Contact section (line 284) | Chrome | MacBook | Yes | Remove heading from ul |
 | Error: Stray script tag | Below body (Line 339) | Chrome | MacBook | Yes | Insert script code inside body |
 
+- ### CSS Validation Testing Bugs ###
+
+![css validation](docs/bugs/testing/css-validation.webp)
+
 - ### Lighthouse Testing Bugs ###
 
-![lighthouse-test1](docs/images/testing/lighthouse-test1.webp)
+![lighthouse-test1](docs/bugs/testing/lighthouse-test1.png)
 
-- ### One Lighthouse Bug Unresolved - Largest Contentful Paint affects Performance ###
+- ### All Lighthouse Bugs Resolved ###
 
 |Bug / Errors | Where / Location site | Browser | Device | Fixed | Solution |
 |-------------|-----------------------|---------|--------|:-----:|----------|
@@ -408,8 +407,6 @@ Throughout the development process, we encountered and resolved various bugs to 
 | Reduce unused CSS — Potential savings of 20 KiB | CSS Stylesheet | Chrome | Apple MacBook | Yes | Refactored code in css stylesheet |
 | Image elements do not have explicit width and height | Logo section | Chrome | Apple MacBook | Yes | Fix logo with specific dimensions |
 | Minimize third-party usage | Colour Theory video section | Chrome | Apple MacBook | Yes | Used mp4 video rather than linking to external site|
-
-- ### CSS Validation Testing Bugs ###
 
 **Google Styles Error**
 
