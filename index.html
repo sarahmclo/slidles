@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Meta tags for search engines-->
-    <meta name="description" content="Slidles. Solve our daily tile-sliding puzzle">
+    <!-- Metatags -->
+    <meta name="description" content="Slidles. Solve a simple puzzle by sliding tiles">
     <meta name="keywords"
-        content="Slidles, slidles, game, puzzle, tile-sliding, tile, tiles, solve, image, daily, today, theme">
+        content="Slidles, slidles, puzzle, game, tile-sliding, tile, tiles, solve, image, theme, birds, colour">
 
     <!-- Title -->
     <title>Slidles</title>
@@ -25,94 +24,118 @@
 <body>
     <!-- Header -->
     <!-- Logo -->
-    <a href="index.html" class="logo">
-        <img src="assets/images/slidles_logo.webp" alt="slidles puzzle logo"
-            aria-label="Logo top-center of screen, the letters of word SLIDLE in bold black on colourful tiles with borders">
-    </a>
+    <img src="assets/images/slidles_logo.webp" class="logo" alt="slidles puzzle logo"
+        aria-label="the logo for the slidles puzzle, top centre of screen, the letters of the word SLIDLE in bold on colourful tiles">
 
     <!-- Tagline -->
-    <h4>Slide tiles to solve a simple puzzle</h4>
+    <h4 class="tagline">Slide tiles to solve a simple puzzle</h4>
 
     <!-- Main content -->
-    <!-- Timer, moves counter, audio, info -->
-    <div class="timer-moves-audio-info-container">
-        <div class="timer-moves">
-            <p><span id="timer">0:00</span></p>
-            <p>Moves <span id="moves">0</span></p>
-        </div>
-        <div class="audio-info">
-            <div class="audio">
-                <img id="volume-icon" onclick="togglePlay()" src="assets/images/vol-off.webp" alt="volume toggle">
-                <audio src="assets/audio/carl-orff-gassenhauer-hans-neusiedler-180891.mp3" loop></audio>
+    <main>
+        <!-- Timer, moves, audio and info section -->
+        <div class="timer-moves-audio-info-container">
+            <!-- Timer and moves -->
+            <div class="timer-moves">
+                <p><span id="timer">0:00</span></p>
+                <p>Moves: <span id="moves">0</span></p>
             </div>
-            <!-- Trigger info modal -->
-            <img id="info-modal" src="assets/images/info-icon.webp" alt="information modal button"
-                aria-label="the letter i within a circle, an information graphic when clicked opens up how to play the puzzle">
-            <!-- Info modal content-->
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <img class="modal-logo" src="assets/images/slidles_logo.webp" alt="slidles logo">
-                    <h4>Slide tiles to solve a simple puzzle and reveal today's image</h4><br>
-                    <h4>How to play</h4>
-                    <hr>
-                    <div class="how-to-play">
-                        <ol>
-                            <li>Click the "Play" button to begin a slidle puzzle.</li>
-                            <li>Click a tile by the empty space and start sliding.</li>
-                            <li>Arrange tiles to form the complete picture.</li>
-                            <li>Keep an eye on the timer and moves counter to track your progress.</li>
-                            <li>Click the "Switch" button to change puzzle.</li>
-                            <li>Click the "Hint" button to view solved puzzle.</li>
-                            <li>Play and pause music by clicking the volume icon.</li>
-                            <li>Ready to solve Slidles? Enjoy!</li>
-                        </ol>
+            <!-- Audio and info -->
+            <div class="audio-info">
+                <div class="audio">
+                    <img id="volume-icon" src="assets/images/vol-off.webp" alt="volume toggle">
+                    <audio src="assets/audio/carl-orff-gassenhauer-hans-neusiedler-180891.mp3" loop></audio>
+                    <!-- Tile sound effect -->
+                    <audio id="slide-click-sound" src="assets/audio/slide-click.mp3" preload="auto"></audio>
+                    <!-- Win sound effect -->
+                    <audio id="win-sound" src="assets/audio/615099__mlaudio__magic_game_win_success.wav" preload="auto"></audio>
+
+                </div>
+                <!-- Info modal -->
+                <img id="info-modal" src="assets/images/info-icon.webp" alt="information modal trigger on how to play"
+                    aria-label="The letter i surrounded by a circle">
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <img class="modal-logo" src="assets/images/slidles_logo.webp" alt="slidles logo">
+                        <h4>Slide tiles to solve a simple puzzle and reveal today's image</h4>
+                        <h4>How to Play</h4>
+                        <hr>
+                        <div class="how-to-play">
+                            <ol>
+                                <li>Click the "Play" button to begin a slidle puzzle.</li>
+                                <li>Click a tile by the empty space and start sliding.</li>
+                                <li>Arrange tiles to form the complete picture.</li>
+                                <li>Keep an eye on the timer and moves counter to track your progress.</li>
+                                <li>Click the "Hint" button to view solved puzzle.</li>
+                                <li>Click the "Switch" button to change puzzle.</li>
+                                <li>Click Play button again to reshuffle and restart.</li>
+                                <li>Play and pause music by clicking the volume icon.</li>
+                                <li><strong>Ready to solve Slidles? Enjoy!</strong></li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Puzzle grid -->
-    <div id="puzzle-container" class="grid-container">
-        <div id="cell11" class="tile tile1"></div>
-        <div id="cell12" class="tile tile2"></div>
-        <div id="cell13" class="tile tile3"></div>
-        <div id="cell21" class="tile tile4"></div>
-        <div id="cell22" class="tile tile5"></div>
-        <div id="cell23" class="tile tile6"></div>
-        <div id="cell31" class="tile tile7"></div>
-        <div id="cell32" class="tile tile8"></div>
-        <div id="cell33" class="tile tile9"></div>
-    </div>
-
-    <!-- Buttons -->
-    <div id="button-container">
-        <div class="playButton-container">
-            <button class="playButton" onClick="shuffle();">Play</button>
+        <!-- Puzzle -->
+        <!-- CSS Grid Layout explaining the grid structure thoroughly - use grid and section in css
+        https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout -->
+        <div id="puzzle-container" class="grid-container">
+            <!-- Grid container 9 cells acting as tiles -->
+            <div id="cell11" class="tile tile1"></div>
+            <div id="cell12" class="tile tile2"></div>
+            <div id="cell13" class="tile tile3"></div>
+            <div id="cell21" class="tile tile4"></div>
+            <div id="cell22" class="tile tile5"></div>
+            <div id="cell23" class="tile tile6"></div>
+            <div id="cell31" class="tile tile7"></div>
+            <div id="cell32" class="tile tile8"></div>
+            <div id="cell33" class="tile tile9"></div>
         </div>
-        <div class="switchHintButton-container">
-            <button class="switchButton" onClick="switchImage();">Switch</button>
-            <button class="hintButton">Hint</button>
+
+        <!-- Buttons -->
+        <div id="button-container">
+            <div class="playButton-container">
+                <button class="playButton" onClick="shuffle">Play</button>
+            </div>
+            <div class="hintButton-container">
+                <button class="hintButton">Hint</button>
+                <button class="switchButton" onclick="switchImage();">Switch</button>
+            </div>
         </div>
-    </div>
 
-    <!-- Modal for hint image -->
-    <div id="hintModal" class="modal">
-        <div class="modal-content">
-            <img src="assets/images/hint.webp" alt="Hint image for puzzle">
+        <!-- Hint modal -->
+        <div id="hintModal" class="modal">
+            <div class="modal-content-hint">
+                <img id="hintImage" src="assets/images/pink-slidle.webp" alt="Hint image for current puzzle">
+            </div>
         </div>
-    </div>
 
-    <!-- Audio slide-click -->
-    <audio id="slide-click-sound" src="assets/audio/slide-click.mp3" preload="auto"></audio>
+        <!-- Win modal -->
+        <div id="winModal" class="winmodal" style="display: none;">
+            <div class="win-modal-content">
+                <h4>You solved Slidles!</h4>
+                <div class="win-time-moves">
+                    <span id="winModalTime"></span><h4>Moves: </h4><span id="winModalMoves"></span>
+                    <div class="playButton-container">
+                        <button class="playButton"
+                            onclick="document.getElementById('winModal').style.display='none'; resetGame();">Play
+                            Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Today's theme -->
-    <p class="theme">Today's puzzle theme: Birds & Colour</p>
+        <!-- Theme -->
+        <p class="theme">This week's theme: Birds & Colour</p>
+    </main>
+
+    <canvas id="confetti"></canvas>
 
     <!-- Footer -->
     <footer>
-        <!-- Social networks -->
+        <!-- Social Networks -->
         <ul id="social-networks">
             <li>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener"
@@ -131,21 +154,19 @@
             </li>
         </ul>
 
-        <!-- Created by -->
-        <p class="copyright">Created by
+        <!-- Created by & contact -->
+        <p class="created-by">Created by
             <a href="https://github.com/sarahmclo/" target="blank" rel="noopener"
-                aria-label="Visit creator's github page (opens in new tab)"> sarachmclo</a> 2024
-            slidlespuzzle@gmail.com
+                aria-label="Visit creator's github page (opens in new tab)"> sarahmclo </a> 2024 / slidlespuzzle@gmail.com
         </p>
-
     </footer>
 
     <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <script src="assets/js/script.js"></script>
 
-    <!-- Font Awesome Kit -->
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/b0f8ceb29c.js" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

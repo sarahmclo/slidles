@@ -2,14 +2,14 @@
 
 ![Mock-Up](docs/slidles-mockup.webp)
 
-Welcome to Slidles, a vibrant puzzle game designed to keep your brain engaged with quick, satisfying challenges. Slidles combines the classic sliding tile puzzle with a fresh, minimalist design, allowing for clean and easy navigation to solve our simple puzzles. Escape the complexity of modern digital life for a few minutes with our bright, eye-catching graphics and clean, intuitive interface. Slidles offers a refreshing experience for players of all ages. Each puzzle is engaging and rewarding, ensuring fun for both novice and seasoned puzzlers. Happy Sliding!
+Welcome to Slidles, a vibrant puzzle game designed to keep your brain engaged with quick, satisfying challenges. Slidles combines the classic sliding tile puzzle with a fresh, minimalist design, allowing for clean and easy navigation to solve our simple puzzles. Escape the complexity of modern life for a few minutes with our bright, eye-catching graphics and clean, intuitive interface. Slidles offers a refreshing experience for players of all ages. Each puzzle is engaging and rewarding, ensuring fun for both novice and seasoned puzzlers. Happy Sliding!
 
-[View Slidles Live Here](https://sarahmclo.github.io/slidles/)
+[View Slidles Live Here](https://sarahmclo.github.io/slidles-puzzle/)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/sarahmclo/slidles)
-![GitHub language count](https://img.shields.io/github/languages/count/sarahmclo/slidles)
-![GitHub top language](https://img.shields.io/github/languages/top/sarahmclo/slidles)
-![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsarahmclo.github.io%2Fslidles%2F)
+![GitHub last commit](https://img.shields.io/github/last-commit/sarahmclo/slidles-puzzle)
+![GitHub language count](https://img.shields.io/github/languages/count/sarahmclo/slidles-puzzle)
+![GitHub top language](https://img.shields.io/github/languages/top/sarahmclo/slidles-puzzle)
+![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fsarahmclo.github.io%2Fslidles-puzzle%2F)
 
 ## Table of Contents
 1. [User Experience (UX)](#user-experience)
@@ -31,12 +31,10 @@ Welcome to Slidles, a vibrant puzzle game designed to keep your brain engaged wi
 3. [Features](#features)
     - [Logo](#logo)
     - [Favicon](#favicon)
-    - [Timer](#timer)
-    - [Moves](#moves)
-    - [Audio](#audio)
-    - [Puzzle](#puzzle)
-    - [Footer](#footer)
-4. [Technologies Utilised](#technologies-utilised)
+    - [Header](#header)
+    - [Main Content](#main-content)
+    - [Footer](footer)
+    - [Technologies Utilised](#technologies-utilised)
     - [Languages](#languages)
     - [Frameworks and Programs](#frameworks-and-programs)
 5. [Deployment](#deployment)
@@ -87,77 +85,68 @@ The main goals of the Slidles project are to:
 - Experience new puzzles and challenges to keep the game engaging.
 - Find improvements and updates that enhance the gameplay.
 - Feel a sense of progression and increasing skill.
+- Connect with like-minded puzzlers, either through the site or by sharing.
 
 ## Design <a name="design"></a>
 
 ### Design Philosophy
-Our design philosophy centers on simplicity, vibrancy, and user engagement. We believe that a clean, aesthetically pleasing design enhances the user's focus on the puzzle itself.
+Our design philosophy centres on simplicity, vibrancy and user engagement. We believe that a clean aesthetically pleasing design enhances the user's focus on the puzzle itself.
 
 ### Design Choices
 - **Minimalist Layout**: Ensures the focus remains on the puzzle.
 - **Responsive Design**: Provides a seamless experience across all devices.
 - **Interactive Elements**: Engages users through dynamic feedback.
 
-- **Reference Images**
-For my sliding puzzle project, I've drawn inspiration from a blend of traditional sliding puzzles and the minimalist elegance of Pantone color swatches. The clean lines and abstract forms of Picasso's line drawings contribute to the aesthetic, while the engaging interactivity of New York Times games shapes the user experience. This fusion of artistic and functional elements creates a uniquely captivating and visually appealing puzzle game.
+- **References**
+For my sliding puzzle project, I've drawn inspiration from a blend of traditional sliding puzzles and the minimalist elegance of Pantone Colour swatches. The clean lines and abstract forms of Picasso's line drawings contribute to the aesthetic. The puzzle itself is like a polaroid snapshot, while the engaging interactivity of New York Times games inspire and shape the user experience. This fusion of artistic and functional elements create a uniquely captivating and visually appealing puzzle game.
 
 ![ref-pic](docs/references.webp)
 
-### Colour Scheme
-A bright and vibrant color scheme is used to make the game visually stimulating. Colors are carefully chosen to create a balance between aesthetics and functionality.
+- ### Colour Scheme
+A bright and vibrant colour scheme is used to make the game visually stimulating. Colours are carefully chosen to create a balance between aesthetics and functionality.
 
 - **Colour Palette**
-The colour palette for this site was devised in keeping with the SLIDLES logo and created in [Adobe Color](https://color.adobe.com/).
+The colour palette fir this site was devised in keeping with the original SLIDLES logo and created in [Adobe Color](https://color.adobe.com/).
 
-<img src="docs/colour-palette.webp" width="500">
+<img src="docs/colour-palette.webp" alt="colour palette">
 
 - **Logo**
-The SLIDLES logo is an original creation using Adobe Illustrator and a starting point for the clean appearance of the puzzle game area.
+The Slidles logo is an original creation using Adobe Illustrator and a starting point for the clean appearance of the puzzle and website.
 
-<img src="docs/slidles_logo.webp" width="500">
+<img src="docs/slidles_logo.webp" alt="logo" width="500">
 
-### Typography
-We use clear, easy-to-read fonts that complement the vibrant design without distracting from the gameplay.
+- ### Typography
+Clear, easy-to-read fonts complement the vibrant design without distracting from gameplay.
 
 - **Fonts**
-The fonts for this site were carefully chosen and imported from [Google Fonts](https://fonts.google.com/).
+The font Montserrat was carefully chosen and imported from [Google Fonts](https://fonts.google.com/).
+Neue-Helvetica was used in keeping with design inspiration.
+Monospace was employed so the timer and moves section were not moving around page whilst incrementing
 
-<img src="docs/fonts/montserrat.webp" alt="montserrat" width="500">
-<img src="docs/fonts/neue-helvetica.webp" alt="neue-helvetica" width="500">
-<img src="docs/fonts/monospace.webp" alt="monospace" width="500">
+<img src="docs/fonts/fonts.webp" alt="fonts">
 
-### Imagery
+- ### Imagery
 Minimal imagery is used, focusing on the tiles and the puzzle interface to keep the design clean and straightforward.
 
 - **Content Hero Images**
- All images were optimised and converted to webp with [Convertio](https://convertio.co/).
-
-<img src="docs/content-puzzle.webp" alt="content-images" width="700">
-
+All images were orignially created, optimised and converted to webp with [Convertio](https://convertio.co/).
 
 ### Wireframes
-
 Wireframes serve as the blueprint for the website, outlining the layout and functionality of each page. They help us visualise the user experience and iterate on design concepts and scope before implementation.
+
+Wireframes for this site were created with [Figma](https://figma.com/).
 
 - **Sketch Wireframes**
 
 <img src="docs/wireframes/wireframe-sketch-mobile.webp" width="500">
-
 <img src="docs/wireframes/wireframe-sketch-desktop.webp" width="500">
 
-- **Mobile Wireframes**
+- **Mobile, Tablet, Desktop Wireframes**
 
-![wireframe-mobile](docs/wireframes/mobile-wireframe.webp)
-
-- **Desktop Page Wireframes**
-
-![wireframe-devices](docs/wireframes/slidles-wireframes.webp)
-
-Wireframes for this site were created with [Figma](https://figma.com/).
+![wireframes](docs/wireframes/slidles-wireframes.webp)
 
 ### Structure
-
-The structure of Slidles is designed for a seamless and intuitive user experience, with a clear content hierarchy, consistent navigation, and responsive design principles.
+The structure of Slidles is designed for a seamless and intuitive user experience, with clear content hierarchy, consistent navigation and responsive design principle.
 
 ### Content Hierarchy
 1. **Puzzle Area**: Central focus for gameplay.
@@ -205,7 +194,6 @@ The structure of Slidles is designed for a seamless and intuitive user experienc
 
 By focusing on these structural elements, Slidles provides an engaging, enjoyable, and accessible experience for all users.
 
-## Structure
 ### The 5 Elements
 1. **Strategy**: Offering a classic puzzle game with a modern twist.
 2. **Scope**: Focusing on a single, well-designed puzzle game.
@@ -213,60 +201,60 @@ By focusing on these structural elements, Slidles provides an engaging, enjoyabl
 4. **Skeleton**: Wireframes ensure a user-friendly layout.
 5. **Surface**: Bright, vibrant design elements create an engaging experience.
 
-  
-## Features <a name="features"></a>
+## Features
 ![slidles-features](docs/slidles-features.webp)
 
-### Logo
-A simple, recognizable logo that reflects the game's playful and modern aesthetic.
-
+### Header
 - **Logo**
-
-Our distinctive logo
-Logo designed in Illustrator and converted to webp with [Convertio](https://convertio.co/).
+A simple, recognisable logo that reflects the game's playful and modern aesthetic, logo is an original creation in Adobe Illustrator.
 
 <img src="docs/slidles_logo.webp" alt="logo" width="500">
 
-### Favicon
+- **Favicon**
+Original creation designed in Adobe Illustrator this custom favicon stems from the designed logo which enhances recognition and improves user experience by providing a visual marker for the puzzle.
 
 <img src="docs/slidles_icon.webp" alt="favicon" width="100">
 
-Original creation designed in Adobe Illustrator this custom favicon stems from the designed logo which enhances recognition and improves user experience by providing a visual marker for the puzzle. 
-
-### Timer:
+### Main Content
+- **Timer**
 Tracks the time taken to solve each puzzle, adding an element of challenge.
-<img src="docs/.webp" alt="timer" width="400">
 
-### Moves:
+- **Moves**
 Counts the number of moves made, encouraging strategic thinking.
-<img src="docs/.webp" alt="moves" width="400">
 
-### Audio:
-Calming audio track with the ability ro be toggled of and on, starts muted.
-Subtle sound effects enhance the interactive experience.
-<img src="docs/.webp" alt="audio" width="400">
+- **Audio**
+Subtle sound effects enhance the interactive experience without being distracting.
+Calming audio available with off/on toggle, muted initially. Fun win sound for optimum sense of accomplishment.
 
-### Puzzle:
-The core feature, designed to be fun, engaging and rewarding.
-<img src="docs/.webp" alt="puzzle" width="400">
+- **Puzzle**
+The core feature, designed to be engaging and rewarding, with varying levels of difficulty.
 
-### Modals:
-Information Modal clearly outlining how to play the puzzle.
-Hint modal shows the complete puzzle
-<img src="docs/.webp" alt="info-modal" width="400">
-<img src="docs/.webp" alt="hint-modal" width="400">
+- **Buttons**
+A clear play button and hint Button allow for clear UX for navigating game.
 
-### Footer:
-Contains essential social media links and contact information.
-<img src="docs/.webp" alt="footer" width="400">
+- **Modals**
+Info modal is discreet but obvious and contains relevant info on how to pplay the game.
+Hint modal gives the user an extra boost on how to solve the puzzle.
+
+- **Theme**
+A description of the puzzle and sets the tone, with a view to changing the puzzle themes weekly.
+- **Confetti**
+Added a burst of confetti on solving the puzzle to optimise user experience and give sense of accomplishment.
+
+### Footer
+- **Social Networks**
+Contains essential social media links for further engagement.
+
+- **Contact Information**
+Displaying important info on how to contact creator, with links.
 
 ## Technologies Utilised <a name="technologies-utilised"></a>
 
 ### Languages
 
-- [**HTML5**](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [**Javascript**](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
+- [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [**HTML5**](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 ### Frameworks and Programs
 
@@ -293,13 +281,13 @@ Git was used for version control. Version control was done locally and remotely.
 GitHub Pages was used to deploy the site remotely.
 
 1. Login to [Git Hub](https://github.com/) Repository account
-2. Navigate to my project repository colourway
+2. Navigate to my project repository slidles-puzzle
 3. Click the Settings near the top of the page
 4. In the left-hand menu, find and click on the Pages
 5. In the Source section, choose 'main' from the drop-down, select branch menu
 6. Select 'root' from the drop-down folder menu
 7. Click 'Save'
-8. Project now live and a link is visible at the top of the page "Your site is published at https://github.com/sarahmclo/slidles/" 
+8. Project now live and a link is visible at the top of the page "Your site is published at (https://github.com/sarahmclo/slidles-puzzle) 
 
 ### Local Deployment
 
@@ -322,26 +310,20 @@ To contribute or check the code, you can:
 
 ## Testing <a name="testing"></a>
 
-## Validation Testing
-### HTML
-![mark-up-test1](docs/bugs/testing/markup-validation.webp)
+### Validation Testing
+## HTML
+![markup-validation](docs/bugs/html-markup-validation.webp)
 
-- **Landing Page**
+## CSS
+![css-validation](docs/bugs/css.validation.webp)
 
-### CSS
-
-- **Stylesheet**
-![css validation](docs/bugs/testing/css-validation.webp)
-
-### Javascript
-
-- **Script**-
-![js hint](docs/bugs/testing/jshint1.webp)
+## Javascript
+![javascript-testing](docs/bugs/jshint-val-fix.webp)
 
 ## Accessibility
 
 ### Lighthouse Testing
-![lightouse-testing](docs/bugs/testing/lighthouse-test.webp)
+![lighthouse-testing](docs/bugs/slidles-lighthouse-test.webp)
 
 ### Semantic HTML
 
@@ -367,64 +349,63 @@ The website is responsive, providing a seamless experience across various device
 
 Manual testing for the site involves hands-on evaluation by human testers to ensure functionality, usability, and compatibility across various devices and browsers. By conducting the manual testing procedures below, we ensure the website functions smoothly, provides an optimal user experience, and meets desired standards.
 
-- **Navigation Testing:** Manually testing the navigation menu ensured all links are working correctly and directing users to the intended pages.
-The navigation menu is responsive and displays properly on different devices and screen sizes.
-- **Subscribe Form Testing:** Testing the subscribe form ensured it functions correctly, allowing users to submit their information successfully. Validation messages were checked and ensured they appear when required fields are left blank or invalid data is entered.
-- **Responsive Design Testing:** Testing the website on various devices (desktop, mobile, tablet) has ensured responsiveness and proper layout adaptation.
-It is verified that all content remains accessible and readable across different screen sizes.
-- **Content Hierarchy Testing:** Verified that the content hierarchy is maintained throughout the website, with clear headings, subheadings, and sections.
-Content is logically organized and easy to navigate for users.
-- **Cross-browser Compatibility Testing:** The website has been tested on different web browsers in Browserstack (Chrome, Firefox) to ensure compatibility and consistent performance. Layout and functionality issues specific to certain browsers have been addressed accordingly.
-- **Form Submission Testing:** Subscribe form has been submitted with valid data and ensures successful submission and confirmation.
-- **Page Structure Testing:** The ayout and structure of individual pages are consistent and aligned with the design specifications.
-There are no formatting issues or discrepancies in the placement of content elements.
-- **Accessibility Testing:** The website has been tested using accessibility tools to ensure compatibility and adherence to accessibility standards.
-Proper labeling, alt text for images, and other accessibility features have been included.
-- **Performance Testing:** The website's performance has been evaluated using tools like DevTools, JS Hint, WC3 Validator and Lighthouse to assess factors such as page load speed, performance metrics, and optimization opportunities.
+Played puzzles on various devices to ensure they function correctly and without errors. Checked that puzzle completion is accurately tracked and that the site provides appropriate feedback and rewards upon solving puzzles. Tested audio, modals, buttons and social links to ensure all functioning efficiently.
+
+| Testing | Description | Browser | Device | Fixed | Responsive |
+|-------------|-----------------------|---------|--------|----------|----------|
+| **Navigation Testing:** | Manually testing to ensure navigation is clear and intuitive, puzzle site should be functional and fun fun and consistent. | Chrome, Safari, Firefox | Desktop, Laptop, Tablet, Mobile | Yes | Yes |
+| **Responsive Design Testing:** | Testing the website on various devices (desktop, mobile, tablet) has ensured responsiveness and proper layout adaptation. It is verified that all content remains accessible and readable across different screen sizes. | Chrome, Safari, Firefox | Desktop, Laptop, Tablet, Mobile | Yes | Yes |
+| **Content Hierarchy Testing:** | Reviewed the arrangement of content on each page to ensure a logical flow and easy readability. Confirmed that headings, subheadings, modals and buttons text are displayed in a clear and hierarchical manner. | Chrome, Safari, Firefox | Desktop, Laptop, Tablet, Mobile | Yes | Yes |
+| **Cross-browser Compatibility Testing:** | The website has been tested on different web browsers in Browserstack (Chrome, Firefox) to ensure compatibility and consistent performance. Layout and functionality issues specific to certain browsers have been addressed accordingly. | Chrome, Safari, Firefox | Desktop, Laptop, Tablet, Mobile | Yes | Yes |
+| **Page Structure Testing:** | Ensured that all pages have a consistent structure and layout. Verified that essential elements like headers, footers, and sidebars are present and correctly positioned on every page. | Chrome, Safari, Firefox | Desktop, Laptop, Tablet, Mobile | Yes | Yes |
+| **Accessibility Testing:** | Assessed the site using tools like screen readers to confirm that it is accessible to users with disabilities. Verified the presence of alt text for images, proper use of ARIA roles, and keyboard navigability. | Chrome, Safari, Firefox | Desktop, Laptop, Tablet, Mobile | Yes | Yes |
+| **Performance Testing:** | Measured the site's loading times and responsiveness under different network conditions. Ensured that pages load quickly and efficiently, optimizing any elements that cause significant delays. | Chrome, Safari, Firefox | Desktop, Laptop, Tablet, Mobile | Yes | Yes | 
 
 ## Bugs and Fixes <a name="bugs-and-fixes"></a>
 
 Throughout the development process, we encountered and resolved various bugs to ensure a smooth and seamless user experience. Our rigorous testing procedures helped identify and address these issues promptly.
 
-- ### Mark-up Validation Testing Bugs
-
-![mark-up-test1](docs/bugs/testing/markup-validation.webp)
-
-- ### All Mark-up Validation Bugs resolved
-
+- ### Mark-up Validation Testing Bugs ###
 |Bug / Errors | Where / Location site | Browser | Device | Fixed | Solution |
 |-------------|-----------------------|---------|--------|:-----:|----------|
-| Warning: The element: button; must not appear as a descendant of the a; element| Welcome & Subscribe Section (line 56) | Chrome | MacBook | Yes | Div container for button so as not inside a tag |
-| Warning: Section lacks heading. Consider using h2 - h6 elements to add identifying headings to all sections | Welcome & subscribe section (line 59) | Chrome | MacBook | Yes | Use h2 for heading |
-| Warning: Section lacks heading. Consider using h2 - h6 elements to add identifying headings to all sections | Photo-gallery section (line 81) | Chrome | MacBook | Yes | Use h2 for heading |
-| Error: Frameborder attribute on iframe is obsolete | Map section (line 215) | Chrome | MacBook | Yes | Remove obsolete attribute and fixed in css |
-| Error: Element h4 is not allowed as child element of ul | Contact section (line 284) | Chrome | MacBook | Yes | Remove heading from ul |
-| Error: Stray script tag | Below body (Line 339) | Chrome | MacBook | Yes | Insert script code inside body |
+| Timer-moves-audio-info-container: get all on one line| Main content index.html | Chrome, Safari, Firefox | Desktop, Laptop, Tablet, Mobile | Yes | Use flexbox to and gap to space correctly  |
+| Audio - sound effect bug - not playing fast enough | Main content index.html | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Update to new trimmed audio and add preload:auto; to html |
+| Audio - stops after one play | Main content index.html | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Use loop |
 
 - ### CSS Validation Testing Bugs ###
 
-![css validation](docs/bugs/testing/css-validation.webp)
-
-- ### Javascript Validation Testing Bugs ###
-
-![css validation](docs/bugs/testing/jshint1.webp)
-
-- ### Lighthouse Testing Bugs ###
-
-![lighthouse-test1](docs/bugs/testing/lighthouse-test1.webp)
-
-- ### All Lighthouse Bugs Resolved ###
-
 |Bug / Errors | Where / Location site | Browser | Device | Fixed | Solution |
 |-------------|-----------------------|---------|--------|:-----:|----------|
-| Largest Contentful Paint element — 8,870 ms| Hero image & text section | Chrome | Apple MacBook | No | Reduce image size neumerous times but not fixed to full capacity |
-| Reduce unused CSS — Potential savings of 20 KiB | CSS Stylesheet | Chrome | Apple MacBook | Yes | Refactored code in css stylesheet |
-| Image elements do not have explicit width and height | Logo section | Chrome | Apple MacBook | Yes | Fix logo with specific dimensions |
-| Minimize third-party usage | Colour Theory video section | Chrome | Apple MacBook | Yes | Used mp4 video rather than linking to external site|
+| Moves & timer move around whilst incrementing| css/js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Use monospace font |
+
+- ### Javascript Validation Testing Bugs ###
+|Bug / Errors | Where / Location site | Browser | Device | Fixed | Solution |
+|-------------|-----------------------|---------|--------|:-----:|----------|
+| audio on-click| js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Use on-click toggle |
+| js hint says variable togglePlay not in use| js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Assign togglePlay in javascript not html - adapted from: https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link |
+| Puzzle grid | html/js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Use background url and css grid https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout|
+| Puzzle-container make gaps in grid to section tiles| css | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Use css display: grid and style grid-gap |
+| puzzle image not showing| css | Chrome, Safari, Firefox | Desktop, Laptop, Tablet, Mobile | Yes | Change cell ids to represent columns 1,2,3 and row1,2,3 |
+| Puzzle image not lining up| css | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Update tile dimensions true to size of image, essential that width and height exact for image to display in correct aspect ratio and image shown completely |
+| tile borders | css | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Amend border to surrounding container rather than each individual tile |
+| Shuffle tiles when playButton clicked | js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Use tile direction array, shuffle() function and math.floor https://stackoverflow.com/questions/57907979/javascript-shuffle-table-rows //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random |
+| playButton and tiles not working| js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Use document.getElementByquerySelector("playButton") incorrect id remove getElementBy and declare gameStarted variable|
+| Shuffle function incorrect | js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Add parentheses |
+| playButton not working| js.script | Chrome, Safari, Firefox | Desktop, Laptop, Tablet, Mobile | Yes | Event Listener incorrect - amend |
+| playButton not shuffling| html/js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Add onClick="shuffle"() in html |
+| playButton not shuffling| js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Remove stray comma that was within code |
+| After game has commenced playButton effects timer and moves - timer is speeding up and extra moves added when clicked - should just shuffle tiles only | js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Add function and event listener to play button which allows playButton to only shuffle at start of game |
+| Close hint modal bug | html/css/js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | no "." in event.target |
+| Alert occurs when page is loaded as puzzle is solved | js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Remove isSolved from reset game |
+| Alert occurs before last tile has moves | js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Add setTimeout to stop alert from showing before last tile has moved https://developer.mozilla.org/en-US/docs/Web/API/setTimeout |
+| Remove numbers display on tiles | js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Use font-size 0 |
+| Change initial win alert to a modal and link play button | js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Make new play again modal, insert play button |
+| Add users fin time and moves to win modal | js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Use .textcontent and template literal  |
+| Fix time display in modal to match game, so time displays as 00:00 | js.script | Chrome, Safari, Firefox  | Desktop, Laptop, Tablet, Mobile | Yes | Copy timer display: add toString().padStart |
+| Uncaught ReferenceError: Cannot access 'jsConfetti' before initialization at puzzleSolved | js.script | Chrome, Safari, Firefox | Desktop, Laptop, Tablet, Mobile | Yes | Move confetti variable to before the puzzleSolved funcation call  |
 
 ## Finished Product <a name="finished-product"></a>
-
-Our Slidles puzzle combines the classic challenge of traditional sliding puzzles with the modern simplicity of Pantone color swatches and the artistic touch of Picasso line drawings. The engaging gameplay, inspired by New York Times games, offers a visually striking and mentally stimulating experience. Perfect for both casual gamers and puzzle enthusiasts, Slidles is a beautiful blend of art and play.
+Our Slidles puzzle combines the classic challenge of traditional sliding puzzles with the modern simplicity of Pantone colour swatches and the artistic touch of Picasso line drawings. The engaging gameplay, inspired by New York Times games, offers a visually striking and mentally stimulating experience. Perfect for both casual gamers and puzzle enthusiasts, Slidles is a beautiful blend of art and play.
 
 <details>
 <summary>Mobile<a name="mobile"></a></summary>
@@ -439,13 +420,12 @@ Our Slidles puzzle combines the classic challenge of traditional sliding puzzles
 </details>
 
 <details>
-<summary>iPad<a name="iPad"></a></summary>
+<summary>Tablet<a name="iPad"></a></summary>
 
-![ipad-index](docs/iPad.webp)
+![ipad-index](docs/tablet.webp)
 </details>
 
 ## Future Features <a name="future-features"></a>
-
 - New puzzle levels and challenges.
 - Additional themes and color schemes.
 - Social sharing features to engage with friends.
@@ -454,7 +434,7 @@ Our Slidles puzzle combines the classic challenge of traditional sliding puzzles
 
 ### Content and Code
 
-* All puzzle, text and imagery are original creations.
+* Puzzle, text and imagery all original creations.
 * [Code-Institute](https://codeinstitute.net/ie/?nab=0) Walkthrough projects content.
 * [MDN](https://developer.mozilla.org/en-US/) Web docs and tutorials.
 * [StackOverflow](https://stackoverflow.com/) Troubleshooting code.
@@ -472,27 +452,27 @@ Our Slidles puzzle combines the classic challenge of traditional sliding puzzles
 * [Am I Responsive](https://ui.dev/amiresponsive) Generate Mock Up Image of site in a responsive manner.
 * [Chrome DevTools](https://developer.chrome.com/docs/devtools) Utilised regularly in development for code review and to test responsiveness.
 * [Browserstack](https://www.browserstack.com/) Browserstack was utilised to test browser compatility across multiple devices.
+* [NPMJS](https://www.npmjs.com/package/js-confetti) Tutorial to add confetti when puzzle is solved.
 * [Shields.io](https://shields.io/) Shields.io used to create dynamic badges for Readme.
 * [Google Fonts](https://fonts.google.com/) Import carefully selected fonts.
 * [Coolers Contrast Checker](https://coolors.co/) Ensure colour contrast inline with guidelines.
 * [Adobe Colors](https://color.adobe.com/) Generate pleasing colour palette in keeping with logo and overall design.
 
 ### Media
-
 * [Adobe Illustrator](https://www.adobe.com/) All original imagery created in Adobe Illustrator.
 * [FontAwesome](https://fontawesome.com/) Icons for social networks.
 * [Favicon](https://favicon.io/) Created my own favicon from logo.
 * [Convertio](https://convertio.co/document-converter/) Images converted to webp for optimal loading.
 * [Pixabay](https://www.pixabay.com) Audio (carl-orff-gassenhauer-hans-neusiedler-180891.mp3)and tile slide sound effect.
 * [The Noun Project](https://www.google.com/maps) Icons for info modal and volume on/off.
+* [Freesound](https://freesound.org/people/MLaudio/sounds/615099/) Win sound effect.
 
 ## Conclusion <a name="conclusion"></a>
-In conclusion, Slidles merges the timeless appeal of sliding puzzles with contemporary design elements, creating a visually captivating and intellectually engaging experience. Our aim is to offer a puzzle site that not only challenges the mind but also delights the senses, making it an ideal destination for both casual players and avid puzzle enthusiasts. Through Slidles, we strive to bring the joy of puzzles to a wider audience, blending art and entertainment in perfect harmony.
+Slidles merges the timeless appeal of sliding puzzles with contemporary design elements, creating a visually captivating and intellectually engaging experience. Our aim is to offer a puzzle site that not only challenges the mind but also delights the senses, making it an ideal destination for both casual players and avid puzzle enthusiasts. Through Slidles, we strive to bring the joy of puzzles to a wider audience, blending art and entertainment in perfect harmony.
 
 ## Acknowledgements <a name="acknowledgements"></a>
- 
-- Amy Richardson, my course facillitator.
 - Rahul Lakahanpal, my mentor.
+- Amy Richardson, my course facillitator.
 - CI Tutor Support and Student Care.
 - Slack community for resources and daily motivation.
 - Fellow course students for sharing.
