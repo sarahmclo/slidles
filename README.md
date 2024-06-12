@@ -548,11 +548,6 @@ Our Slidles puzzle combines the classic challenge of traditional sliding puzzles
 Slidles merges the timeless appeal of sliding puzzles with contemporary design elements, creating a visually captivating and intellectually engaging experience. Our aim is to offer a puzzle site that not only challenges the mind but also delights the senses, making it an ideal destination for both casual players and avid puzzle enthusiasts. Through Slidles, we strive to bring the joy of puzzles to a wider audience, blending art and entertainment in perfect harmony.
 
 ## Acknowledgements <a name="acknowledgements"></a>
-- Rahul Lakahanpal, my wonderful mentor.
-- Amy Richardson, my course facillitator for calmly and consistently sharing invaluable resources.
-- Fellow brilliant course students for sharing.
-- Our Slack community for resources and daily motivation.
-- Ed B_alum in CI Slack for sharing valued info on audio woes.
 - Ozzy the dog on breaks. 
 - My own childhood tile-sliding puzzle for inspiration.
 
