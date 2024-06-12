@@ -36,19 +36,19 @@
         <div class="timer-moves-audio-info-container">
             <!-- Timer and moves -->
             <div class="timer-moves">
-                <p><span id="timer">0:00</span></p>
+                <p><span id="timer">00:00</span></p>
                 <p>Moves: <span id="moves">0</span></p>
             </div>
             <!-- Audio and info -->
             <div class="audio-info">
                 <div class="audio">
                     <img id="volume-icon" src="assets/images/vol-off.webp" alt="volume toggle">
-                    <audio src="assets/audio/carl-orff-gassenhauer-hans-neusiedler-180891.mp3" loop></audio>
+                    <audio id="music" src="assets/audio/carl-orff-gassenhauer-hans-neusiedler-180891.mp3" loop></audio>
                     <!-- Tile sound effect -->
                     <audio id="slide-click-sound" src="assets/audio/slide-click.mp3" preload="auto"></audio>
                     <!-- Win sound effect -->
-                    <audio id="win-sound" src="assets/audio/615099__mlaudio__magic_game_win_success.wav" preload="auto"></audio>
-
+                    <audio id="win-sound" src="assets/audio/615099__mlaudio__magic_game_win_success.wav"
+                        preload="auto"></audio>
                 </div>
                 <!-- Info modal -->
                 <img id="info-modal" src="assets/images/info-icon.webp" alt="information modal trigger on how to play"
@@ -65,13 +65,14 @@
                                 <li>Click the "Play" button to begin a slidle puzzle.</li>
                                 <li>Click a tile by the empty space and start sliding.</li>
                                 <li>Arrange tiles to form the complete picture.</li>
-                                <li>Keep an eye on the timer and moves counter to track your progress.</li>
+                                <li>Track your progress via the timer and moves counters.</li>
                                 <li>Click the "Hint" button to view solved puzzle.</li>
-                                <li>Click the "Switch" button to change puzzle.</li>
                                 <li>Click Play button again to reshuffle and restart.</li>
-                                <li>Play and pause music by clicking the volume icon.</li>
+                                <li>Play and pause audio by clicking the volume icon.</li>
                                 <li><strong>Ready to solve Slidles? Enjoy!</strong></li>
                             </ol>
+                            <p>This week's theme is birds and colour, return daily for more puzzles!</p>
+                            <img id="puzzles" src="assets/images/puzzles.webp" alt="other puzzles">
                         </div>
                     </div>
                 </div>
@@ -97,11 +98,25 @@
         <!-- Buttons -->
         <div id="button-container">
             <div class="playButton-container">
-                <button class="playButton" onClick="shuffle">Play</button>
+                <button class="playButton">Play</button>
             </div>
             <div class="hintButton-container">
                 <button class="hintButton">Hint</button>
-                <button class="switchButton" onclick="switchImage();">Switch</button>
+            </div>
+        </div>
+
+        <!-- Audio modal -->
+        <div id="audioModal" class="modal" style="display: none;">
+            <div class="audio-modal-content">
+                <div>
+                    <label for="sfx-toggle">Sound Effects</label>
+                    <input type="checkbox" id="sfx-toggle">
+                </div>
+                <div>
+                    <label for="music-toggle">Music</label>
+                    <input type="checkbox" id="music-toggle">
+                </div>
+                <button id="resumeButton">Resume</button>
             </div>
         </div>
 
@@ -113,32 +128,33 @@
         </div>
 
         <!-- Win modal -->
-        <div id="winModal" class="winmodal" style="display: none;">
+        <div id="winModal" class="win-modal" style="display: none;">
             <div class="win-modal-content">
+                <span class="close">&times;</span>
                 <h4>You solved Slidles!</h4>
                 <div class="win-time-moves">
-                    <span id="winModalTime"></span><h4>Moves: </h4><span id="winModalMoves"></span>
+                    <h4>Time:</h4><span id="winModalTime"></span>
+                    <h4>Moves:</h4><span id="winModalMoves"></span>
                     <div class="playButton-container">
-                        <button class="playButton"
-                            onclick="document.getElementById('winModal').style.display='none'; resetGame();">Play
-                            Again</button>
+                        <button class="playAgainButton">Play Again</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Theme -->
-        <p class="theme">This week's theme: Birds & Colour</p>
-    </main>
+        <p class="theme">Today's theme: birds & colour</p>
 
-    <canvas id="confetti"></canvas>
+        <!-- Confetti - adapted from tutorial https://www.npmjs.com/package/js-confetti -->
+        <canvas id="confetti"></canvas>
+    </main>
 
     <!-- Footer -->
     <footer>
         <!-- Social Networks -->
         <ul id="social-networks">
             <li>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                <a href="https://www.instagram.com/sarah_margie/" target="_blank" rel="noopener"
                     aria-label="Visit my Instagram page (opens in a new tab)">
                     <i class="fa-brands fa-instagram"></i></a>
             </li>
@@ -148,7 +164,7 @@
                     <i class="fa-brands fa-github"></i></a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
+                <a href="https://www.linkedin.com/in/sarah-mcloughlin-207b89297/" target="_blank" rel="noopener"
                     aria-label="Visit LinkedIn (opens in a new tab)">
                     <i class="fa-brands fa-linkedin"></i></a>
             </li>
@@ -157,16 +173,22 @@
         <!-- Created by & contact -->
         <p class="created-by">Created by
             <a href="https://github.com/sarahmclo/" target="blank" rel="noopener"
-                aria-label="Visit creator's github page (opens in new tab)"> sarahmclo </a> 2024 / slidlespuzzle@gmail.com
+                aria-label="Visit creator's github page (opens in new tab)"> sarahmclo</a> 2024 /
+            slidlespuzzle@gmail.com
         </p>
     </footer>
 
     <!-- JS -->
+    <!-- Confetti -->
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <script src="assets/js/script.js"></script>
 
+    <!-- Audio fix sfx delay on mobile and tablet -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.core.min.js"></script>
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/b0f8ceb29c.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

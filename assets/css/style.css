@@ -33,7 +33,7 @@ main {
     height: auto;
     padding: 10px 20px 15px 20px;
     max-width: 390px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 /* Tagline */
@@ -43,7 +43,6 @@ main {
 
 /* Main content */
 /* Timer, moves, audio & info */
-/* flex allows all to be on same line, add gap */
 .timer-moves-audio-info-container {
     display: flex;
     justify-content: space-between;
@@ -113,8 +112,11 @@ main {
     margin: 30% auto;
     /* from top and centered */
     padding: 20px;
-    border: 1px solid #252525;
     width: 80%;
+}
+
+.modal-content img {
+    max-width: 100%;
 }
 
 /* Info modal close button */
@@ -130,6 +132,56 @@ main {
     color: #3f3f42;
     text-decoration: none;
     cursor: pointer;
+}
+
+hr {
+    margin: 0px 20px 0px 20px;
+ }
+
+ #puzzles{
+    padding: 10px;
+ }
+
+/* Audio modal */
+#audioModal {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.audio-modal-content {
+    background-color: #fefefe;
+    margin: 32% auto;
+    /* from top and centered */
+    padding: 20px;
+    border-radius: 10px;
+    width: 75%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+#audioModal #resumeButton {
+    margin-top: 10px;
+}
+
+#audioModal #resumeButton:hover,
+#winModal .playAgainButton:hover {
+    background-color: #A8CD6E;
+}
+
+/* Style checkbox https://sentry.io/answers/how-to-style-a-checkbox-using-css/ */
+.checkbox input,
+#sfx-toggle,
+#music-toggle {
+    width: 1.5em;
+    height: 1.5em;
+    accent-color: #A8CD6E;
 }
 
 .how-to-play,
@@ -155,7 +207,7 @@ ol li {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Makes 3 equal columns in backgroound url */
+    /* Makes 3 equal columns in background url */
     grid-gap: 2px;
     /* Gaps in image to form tiles */
     border: 1px solid #3f3f42;
@@ -164,7 +216,7 @@ ol li {
 
 .tile {
     width: 100%;
-    /*This makes tile occupy full with in grid cell */
+    /*This makes tile occupy full width in grid cell */
     height: 0;
     cursor: pointer;
 }
@@ -178,7 +230,7 @@ ol li {
 .tile7,
 .tile8,
 .tile9 {
-    background: url(../images/pink-slidle.webp);
+    background: url("../images/pink-slidle.webp");
     background-size: 345px 345px;
     width: 114px;
     height: 114px;
@@ -218,8 +270,7 @@ ol li {
 }
 
 .tile9 {
-    background: none;
-    background-color: #ffffff;
+    background: #ffffff;
     cursor: default;
     /* Blank tile 9 */
 }
@@ -234,14 +285,14 @@ ol li {
 }
 
 .hintButton-container {
-    margin-bottom: 10px;
     display: flex;
     justify-content: space-evenly;
 }
 
 .playButton,
 .hintButton,
-.switchButton {
+.playAgainButton,
+#resumeButton {
     background-color: #252525;
     border: 0.5px solid #ffffff;
     border-radius: 20px;
@@ -263,8 +314,7 @@ ol li {
 }
 
 .playButton:hover,
-.hintButton:hover,
-.switchButton:hover {
+.hintButton:hover {
     background-color: #F3A0BC;
     color: #ffffff;
     border: 0.5px solid #ffffff;
@@ -292,7 +342,6 @@ ol li {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid #252525;
 }
 
 .win-modal-content {
@@ -300,13 +349,17 @@ ol li {
     margin: 32% auto;
     /* from top and centered */
     padding: 20px;
-    border: 1px solid #252525;
     border-radius: 10px;
     width: 75%;
 }
 
 #winModal .playButton-container {
     padding-top: 10px;
+}
+
+#winModal .playAgainButton,
+#resumeButton {
+    background-color: #F3A0BC;
 }
 
 #winModal .playButton:hover {
@@ -328,13 +381,47 @@ ol li {
     font-size: 36px;
     list-style-type: none;
     justify-content: space-evenly;
-    padding: 10px 20px 10px 20px;
+    padding: 20px 20px 10px 20px;
 }
 
 /* Created by & contact */
 .created-by {
     font-size: 12px;
     padding: 0px 20px 10px 20px;
+}
+
+/*======================
+    404 page
+=======================*/
+section {
+    align-items: center;
+    margin: 20px;
+}
+
+.error-image {
+    margin-top: 4rem;
+    max-width: 90%;
+}
+
+.errror-text {
+    display: block;
+    padding: 40px 40px;
+}
+
+.error-text h1 {
+    color: #252525;
+    font-size: 36px;
+    font-weight: 700;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.error-menu {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    list-style-type: none;
+    font-size: 18px;
 }
 
 /* Disable colour on a tag when visited (for testing) */
@@ -364,9 +451,10 @@ a:active {
         margin: 20% auto;
     }
 
-    .win-modal-content {
-        width: 50%;
-        margin: 20% auto;
+    .win-modal-content,
+    .audio-modal-content {
+        width: 30%;
+        margin: 10% auto;
     }
 
     #hintImage {
@@ -374,8 +462,8 @@ a:active {
     }
 }
 
-/* Media query: Large screens (992px and up) */
-@media screen and (min-width: 992px) {
+/* Media query: Large screens (1200px and up) */
+@media screen and (min-width: 1200px) {
     body {
         min-height: 100vh;
         margin: 0%;
@@ -391,12 +479,21 @@ a:active {
         margin: 13% auto;
     }
 
-    .win-modal-content {
-        width: 30%;
-        margin: 20% auto;
+    .win-modal-content,
+    .audio-modal-content {
+        width: 25%;
+        margin: 10% auto;
     }
 
     #hintImage {
         top: 40%;
+    }
+
+    /*======================
+    404 page
+    =======================*/
+    .error-image {
+        margin-top: 6rem;
+        max-width: 400px;
     }
 }
