@@ -1,4 +1,50 @@
+// Wait for DOM content to load
 document.addEventListener("DOMContentLoaded", function () {
+
+    // Switch Button
+    const switchButton = document.querySelector('.switchButton');
+    const puzzleSelectModal = document.getElementById('puzzleSelectModal');
+
+    switchButton.addEventListener('click', function () {
+        puzzleSelectModal.style.display = "block";
+    });
+
+    // Puzzle Selection Modal
+    const puzzleOptions = document.querySelectorAll('.puzzle-option');
+    const hintImage = document.getElementById('hintImage');
+
+    puzzleOptions.forEach(option => {
+        option.addEventListener('click', function () {
+            const newPuzzleSrc = option.getAttribute('src');
+            updatePuzzle(newPuzzleSrc);
+            puzzleSelectModal.style.display = "none";
+        });
+    });
+
+    function updatePuzzle(newSrc) {
+        const tiles = document.querySelectorAll('.tile');
+        tiles.forEach((tile, index) => {
+            tile.style.backgroundImage = `url(${newSrc})`;
+        });
+        // Replace 'black-hint.webp' with 'black-slidle.webp' in the hint image source
+        hintImage.src = newSrc.replace('-hint', '-slidle');
+    }
+
+    // Close Modal
+    const closeButtons = document.querySelectorAll('.modal .close');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            button.parentElement.parentElement.style.display = "none";
+        });
+    });
+
+    // Close modal on outside click
+    window.addEventListener("click", function (event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
+        }
+    });
+
     const playButton = document.querySelector('.playButton');
     const tiles = document.querySelectorAll('.tile');
     const timerDisplay = document.getElementById('timer');
@@ -212,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Close modals on overlay click
+    // Close modals on overlay click (continued)
     window.addEventListener("click", function (event) {
         if (event.target === infoModal) {
             infoModal.style.display = "none";
@@ -239,4 +285,4 @@ document.addEventListener("DOMContentLoaded", function () {
         winSound.currentTime = 0;
         winSound.play();
     }
-});
+});    

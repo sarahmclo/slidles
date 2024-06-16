@@ -242,13 +242,25 @@ ol li {
     cursor: default;
 }
 
+/* CSS for puzzle options */
+.puzzle-option {
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.puzzle-option.selected {
+    border-color: #252525;
+    cursor: default;
+}
+
 /* Buttons */
 #button-container {
     padding: 5px;
 }
 
 .playButton-container,
-.hintButton-container {
+.hintButton-container,
+.switchButton-container {
     margin-bottom: 10px;
     display: flex;
     justify-content: space-evenly;
@@ -256,6 +268,7 @@ ol li {
 
 .playButton,
 .hintButton,
+.switchButton,
 .playAgainButton,
 #resumeButton {
     background-color: #252525;
