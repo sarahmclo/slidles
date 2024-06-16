@@ -132,7 +132,7 @@ hr {
     padding: 10px;
 }
 
-/* Audio Modal */
+/* Audio modal */
 #audioModal {
     position: fixed;
     z-index: 1;
@@ -144,9 +144,24 @@ hr {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-#audioModal #resumeButton,
-#winModal .playAgainButton:hover {
+.audio-modal-content {
+    background-color: #fefefe;
+    margin: 32% auto;
+    /* from top and centered */
+    padding: 20px;
+    border-radius: 10px;
+    width: 75%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+#audioModal #resumeButton {
     margin-top: 10px;
+}
+
+#audioModal #resumeButton:hover,
+#winModal .playAgainButton:hover {
     background-color: #A8CD6E;
 }
 
@@ -324,7 +339,8 @@ ol li {
     padding-top: 10px;
 }
 
-#winModal .playAgainButton {
+#winModal .playAgainButton, 
+#resumeButton {
     background-color: #F3A0BC;
 }
 

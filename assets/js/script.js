@@ -196,25 +196,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000);
     });
 
-    // Audio Modal
-    document.getElementById('volume-icon').addEventListener('click', toggleAudioModal);
+    /** Audio */
+    // Sfx
+    document.addEventListener('DOMContentLoaded', function() {
+        // Select the button element or any other element to trigger the audio playback
+        const playButton = document.getElementById('play-button');
 
-    function toggleAudioModal() {
-        const audioModal = document.getElementById("audioModal");
-        audioModal.style.display = audioModal.style.display === "block" ? "none" : "block";
+        // Define the Howl instance
+        const SlideClicksound = new Howl({ 
+            src: ['assets/audio/slide-click.mp3', 'assets/audio/615099__mlaudio__magic_game_win_success.wav'], 
+            preload: true
+        });
+
+        // Add click event listener to the button
+        playButton.addEventListener('click', function() {
+            // Start playing the audio after the user clicks the button
+            SlideClicksound.play();
+        });
+    });
+
+    // Toggle on/off - adapted in codepen from tutorial https://stackoverflow.com/questions/55018585/how-to-turn-on-audio-on-click-icon-play-pause
+    // Assign togglePlay function to onclick events of vol-icon a (adapted from: https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link)
+    function togglePlay() {
+        let modal = document.getElementById("audioModal");
+        modal.style.display = "block";
     }
 
-    // Resume Button in Audio Modal
-    const resumeButton = document.getElementById("resumeButton");
-    resumeButton.addEventListener("click", resumeSettings);
-
     function resumeSettings() {
-        const music = document.getElementById("music");
-        const slideClickSound = document.getElementById("slide-click-sound");
-        const winSound = document.getElementById("win-sound");
+        let music = document.getElementById("music");
+        let slideClickSound = document.getElementById("slide-click-sound");
+        let winSound = document.getElementById("win-sound");
 
-        const musicToggle = document.getElementById("music-toggle").checked;
-        const sfxToggle = document.getElementById("sfx-toggle").checked;
+        let musicToggle = document.getElementById("music-toggle").checked;
+        let sfxToggle = document.getElementById("sfx-toggle").checked;
 
         if (musicToggle) {
             music.play();
@@ -228,9 +242,31 @@ document.addEventListener("DOMContentLoaded", function () {
         slideClickSound.muted = !sfxToggle;
         winSound.muted = !sfxToggle;
 
+        // Hide after applying
         document.getElementById("audioModal").style.display = "none";
+
+        audio.addEventListener('load', function () {
+            audio.play();
+        });
     }
 
+    window.onload = function () {
+        let applyBtn = document.getElementById("resumeButton");
+
+        document.getElementById("volume-icon").onclick = togglePlay;
+        applyBtn.onclick = resumeSettings;
+
+        let slideClickSound = document.getElementById("slide-click-sound");
+        slideClickSound.muted = true;
+        slideClickSound.currentTime = 0;
+
+        let winSound = document.getElementById("win-sound");
+        winSound.muted = true;
+        winSound.currentTime = 0;
+
+        document.getElementById("volume-icon").onclick = togglePlay;
+    };
+    
     // Info Modal
     const infoModal = document.getElementById("myModal");
     const infoButton = document.getElementById("info-modal");
