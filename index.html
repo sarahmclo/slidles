@@ -4,31 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- Metatags -->
     <meta name="description" content="Slidles. Solve a simple puzzle by sliding tiles">
-    <meta name="keywords"
-        content="Slidles, slidles, puzzle, game, tile-sliding, tile, tiles, solve, image, theme, birds, colour">
-
+    <meta name="keywords" content="Slidles, slidles, puzzle, game, tile-sliding, tile, tiles, solve, image, theme, birds, colour">
+    
     <!-- Title -->
     <title>Slidles</title>
-
+    
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-
+    
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <!-- Header -->
-    <!-- Logo -->
-    <img src="assets/images/slidles_logo.webp" class="logo" alt="slidles puzzle logo"
-        aria-label="the logo for the slidles puzzle, top centre of screen, the letters of the word SLIDLE in bold on colourful tiles">
-
-    <!-- Tagline -->
-    <h4 class="tagline">Slide tiles to solve a simple puzzle</h4>
+    <header>
+        <!-- Logo -->
+        <img src="assets/images/slidles_logo.webp" class="logo" alt="slidles puzzle logo" aria-label="the logo for the slidles puzzle, top centre of screen, the letters of the word SLIDLE in bold on colourful tiles">
+        <!-- Tagline -->
+        <h4 class="tagline">Slide tiles to solve a simple puzzle</h4>
+    </header>
 
     <!-- Main content -->
     <main>
@@ -39,20 +39,21 @@
                 <p><span id="timer">00:00</span></p>
                 <p>Moves: <span id="moves">0</span></p>
             </div>
+            
             <!-- Audio and info -->
             <div class="audio-info">
+                <!-- Audio controls -->
                 <div class="audio">
                     <img id="volume-icon" src="assets/images/vol-off.webp" alt="volume toggle">
                     <audio id="music" src="assets/audio/carl-orff-gassenhauer-hans-neusiedler-180891.mp3" loop></audio>
-                    <!-- Tile sound effect -->
                     <audio id="slide-click-sound" src="assets/audio/slide-click.mp3" preload="auto"></audio>
-                    <!-- Win sound effect -->
-                    <audio id="win-sound" src="assets/audio/615099__mlaudio__magic_game_win_success.wav"
-                        preload="auto"></audio>
+                    <audio id="win-sound" src="assets/audio/615099__mlaudio__magic_game_win_success.wav" preload="auto"></audio>
                 </div>
+                
+                <!-- Info modal trigger -->
+                <img id="info-modal" src="assets/images/info-icon.webp" alt="information modal trigger on how to play" aria-label="The letter i surrounded by a circle">
+                
                 <!-- Info modal -->
-                <img id="info-modal" src="assets/images/info-icon.webp" alt="information modal trigger on how to play"
-                    aria-label="The letter i surrounded by a circle">
                 <div id="myModal" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
@@ -79,11 +80,9 @@
             </div>
         </div>
 
-        <!-- Puzzle -->
-        <!-- CSS Grid Layout explaining the grid structure thoroughly - use grid and section in css
-        https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout -->
+        <!-- Puzzle container -->
         <div id="puzzle-container" class="grid-container">
-            <!-- Grid container 9 cells acting as tiles -->
+            <!-- Grid tiles -->
             <div id="cell11" class="tile tile1"></div>
             <div id="cell12" class="tile tile2"></div>
             <div id="cell13" class="tile tile3"></div>
@@ -145,7 +144,7 @@
         <!-- Theme -->
         <p class="theme">Today's theme: birds & colour</p>
 
-        <!-- Confetti - adapted from tutorial https://www.npmjs.com/package/js-confetti -->
+        <!-- Confetti -->
         <canvas id="confetti"></canvas>
     </main>
 
@@ -154,32 +153,27 @@
         <!-- Social Networks -->
         <ul id="social-networks">
             <li>
-                <a href="https://www.instagram.com/sarah_margie/" target="_blank" rel="noopener"
-                    aria-label="Visit my Instagram page (opens in a new tab)">
+                <a href="https://www.instagram.com/sarah_margie/" target="_blank" rel="noopener" aria-label="Visit my Instagram page (opens in a new tab)">
                     <i class="fa-brands fa-instagram"></i></a>
             </li>
             <li>
-                <a href="https://github.com/sarahmclo/" target="_blank" rel="noopener"
-                    aria-label="Visit my GitHub page (opens in a new tab)">
+                <a href="https://github.com/sarahmclo/" target="_blank" rel="noopener" aria-label="Visit my GitHub page (opens in a new tab)">
                     <i class="fa-brands fa-github"></i></a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/sarah-mcloughlin-207b89297/" target="_blank" rel="noopener"
-                    aria-label="Visit LinkedIn (opens in a new tab)">
+                <a href="https://www.linkedin.com/in/sarah-mcloughlin-207b89297/" target="_blank" rel="noopener" aria-label="Visit LinkedIn (opens in a new tab)">
                     <i class="fa-brands fa-linkedin"></i></a>
             </li>
         </ul>
 
         <!-- Created by & contact -->
         <p class="created-by">Created by
-            <a href="https://github.com/sarahmclo/" target="blank" rel="noopener"
-                aria-label="Visit creator's github page (opens in new tab)"> sarahmclo</a> 2024 /
+            <a href="https://github.com/sarahmclo/" target="_blank" rel="noopener" aria-label="Visit creator's github page (opens in new tab)"> sarahmclo</a> 2024 /
             slidlespuzzle@gmail.com
         </p>
     </footer>
 
     <!-- JS -->
-    <!-- Confetti -->
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <script src="assets/js/script.js"></script>
 
@@ -188,7 +182,6 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/b0f8ceb29c.js" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

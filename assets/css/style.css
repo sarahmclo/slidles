@@ -1,14 +1,13 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Asterisk wildcard selector to override default styles added by browser */
+/* Global styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* General styles */
 body {
     color: #252525;
     display: flex;
@@ -27,7 +26,6 @@ main {
 }
 
 /* Header */
-/* Logo */
 .logo {
     width: 100%;
     height: auto;
@@ -36,20 +34,17 @@ main {
     margin-top: 15px;
 }
 
-/* Tagline */
 .tagline {
     padding: 0 20px 20px 20px;
 }
 
-/* Main content */
-/* Timer, moves, audio & info */
+/* Timer, Moves, Audio, and Info */
 .timer-moves-audio-info-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* flex allows all to be on same line, add gap */
 .timer-moves {
     display: flex;
     align-items: center;
@@ -58,7 +53,7 @@ main {
 
 #timer,
 #moves {
-    font-family: 'Courier New', 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     font-weight: 600;
 }
@@ -68,37 +63,31 @@ main {
     gap: 10px;
 }
 
-/* Audio tutorial, code adapted from https://dev.to/ctrlcoding/how-to-create-a-simple-audio-player-in-html-javascript-and-css-4l2e */
 #volume-icon {
     width: 25px;
     height: 25px;
     cursor: pointer;
 }
 
-/* Info Modal Styles */
 #info-modal {
-    /* Icon */
     width: 25px;
     height: 25px;
     cursor: pointer;
     display: flex;
 }
 
+/* Modal Styles */
 .modal {
     display: none;
-    /* Default is hidden */
     position: fixed;
     z-index: 1;
-    /* Sit on top */
     align-items: center;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    /* Enable scroll */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
 }
 
 .modal-logo {
@@ -107,19 +96,20 @@ main {
     height: auto;
 }
 
-.modal-content {
+.modal-content,
+.audio-modal-content,
+.win-modal-content {
     background-color: #fefefe;
     margin: 30% auto;
-    /* from top and centered */
     padding: 20px;
     width: 80%;
+    border-radius: 10px;
 }
 
 .modal-content img {
     max-width: 100%;
 }
 
-/* Info modal close button */
 .close {
     float: right;
     color: #8f8d8d;
@@ -135,14 +125,14 @@ main {
 }
 
 hr {
-    margin: 0px 20px 0px 20px;
- }
+    margin: 0px 20px;
+}
 
- #puzzles{
+#puzzles {
     padding: 10px;
- }
+}
 
-/* Audio modal */
+/* Audio Modal */
 #audioModal {
     position: fixed;
     z-index: 1;
@@ -154,28 +144,12 @@ hr {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.audio-modal-content {
-    background-color: #fefefe;
-    margin: 32% auto;
-    /* from top and centered */
-    padding: 20px;
-    border-radius: 10px;
-    width: 75%;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-}
-
-#audioModal #resumeButton {
-    margin-top: 10px;
-}
-
-#audioModal #resumeButton:hover,
+#audioModal #resumeButton,
 #winModal .playAgainButton:hover {
+    margin-top: 10px;
     background-color: #A8CD6E;
 }
 
-/* Style checkbox https://sentry.io/answers/how-to-style-a-checkbox-using-css/ */
 .checkbox input,
 #sfx-toggle,
 #music-toggle {
@@ -189,8 +163,7 @@ h4 {
     padding: 10px;
 }
 
-.how-to-play,
-ol {
+.how-to-play ol {
     list-style-type: none;
     font-size: 14px;
     line-height: 20px;
@@ -202,21 +175,16 @@ ol li {
 }
 
 /* Puzzle */
-/* Grid Styles */
-/* CSS Cells https://developer.mozilla.org/en-US/docs/Glossary/Grid_Cell */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Makes 3 equal columns in background url */
     grid-gap: 2px;
-    /* Gaps in image to form tiles */
     border: 1px solid #3f3f42;
     margin-bottom: 15px;
 }
 
 .tile {
     width: 100%;
-    /*This makes tile occupy full width in grid cell */
     height: 0;
     cursor: pointer;
 }
@@ -272,7 +240,6 @@ ol li {
 .tile9 {
     background: #ffffff;
     cursor: default;
-    /* Blank tile 9 */
 }
 
 /* Buttons */
@@ -280,11 +247,9 @@ ol li {
     padding: 5px;
 }
 
-.playButton-container {
-    margin-bottom: 10px;
-}
-
+.playButton-container,
 .hintButton-container {
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -303,13 +268,10 @@ ol li {
     font-size: 18px;
     font-weight: 300;
     line-height: 40px;
-    /* Vertically center text */
     transition: all 200ms ease;
     text-decoration: none;
     width: 140px;
-    /* Fixed width */
     height: 40px;
-    /* Fixed height */
     text-align: center;
 }
 
@@ -332,7 +294,7 @@ ol li {
     border: 1px solid #252525;
 }
 
-/* Win modal */
+/* Win Modal */
 #winModal {
     position: fixed;
     z-index: 1;
@@ -344,26 +306,12 @@ ol li {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.win-modal-content {
-    background-color: #fefefe;
-    margin: 32% auto;
-    /* from top and centered */
-    padding: 20px;
-    border-radius: 10px;
-    width: 75%;
-}
-
 #winModal .playButton-container {
     padding-top: 10px;
 }
 
-#winModal .playAgainButton,
-#resumeButton {
+#winModal .playAgainButton {
     background-color: #F3A0BC;
-}
-
-#winModal .playButton:hover {
-    background-color: #A8CD6E;
 }
 
 #confetti {
@@ -375,7 +323,6 @@ ol li {
 }
 
 /* Footer */
-/* Social networks */
 #social-networks {
     display: flex;
     font-size: 36px;
@@ -384,15 +331,12 @@ ol li {
     padding: 20px 20px 10px 20px;
 }
 
-/* Created by & contact */
 .created-by {
     font-size: 12px;
     padding: 0px 20px 10px 20px;
 }
 
-/*======================
-    404 page
-=======================*/
+/* 404 Page */
 section {
     align-items: center;
     margin: 20px;
@@ -403,9 +347,9 @@ section {
     max-width: 90%;
 }
 
-.errror-text {
+.error-text {
     display: block;
-    padding: 40px 40px;
+    padding: 40px;
 }
 
 .error-text h1 {
@@ -424,7 +368,6 @@ section {
     font-size: 18px;
 }
 
-/* Disable colour on a tag when visited (for testing) */
 a,
 a:visited,
 a:hover,
@@ -433,14 +376,12 @@ a:active {
 }
 
 /* Media Queries */
-/* Media Query: Mobile Device*/
 @media only screen and (max-width: 600px) {
     body {
         min-height: 100vh;
     }
 }
 
-/* Media Query: Tablet Device */
 @media only screen and (min-width: 768px) {
     body {
         min-height: 0vh;
@@ -462,7 +403,6 @@ a:active {
     }
 }
 
-/* Media query: Large screens (1200px and up) */
 @media screen and (min-width: 1200px) {
     body {
         min-height: 100vh;
@@ -489,9 +429,6 @@ a:active {
         top: 40%;
     }
 
-    /*======================
-    404 page
-    =======================*/
     .error-image {
         margin-top: 6rem;
         max-width: 400px;
