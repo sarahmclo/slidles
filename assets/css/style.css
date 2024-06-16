@@ -92,7 +92,7 @@ main {
 
 .modal-logo {
     width: 200px;
-    padding: 10px 0px 10px 15px;
+    padding: 20px 0px 10px 15px;
     height: auto;
 }
 
@@ -101,7 +101,7 @@ main {
 .win-modal-content {
     background-color: #fefefe;
     margin: 30% auto;
-    padding: 20px;
+    padding: 10px;
     width: 80%;
     border-radius: 10px;
 }

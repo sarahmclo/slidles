@@ -29,10 +29,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updatePuzzle(newSrc) {
         tiles.forEach((tile, index) => {
-            tile.style.backgroundImage = `url(${newSrc})`;
+            const number = index + 1;
+            if (number <= 8) {
+                tile.style.backgroundImage = `url(${newSrc})`;
+                tile.textContent = number.toString();
+                tile.className = `tile tile${number}`;
+            } else {
+                tile.style.backgroundImage = 'none'; // Ensure blank tile has no background
+                tile.textContent = ""; // Ensure the 9th tile is empty
+                tile.className = 'tile tile9';
+            }
         });
-        hintImage.src = newSrc.replace('-hint', '-slidle');
+        blankTileRow = 2;
+        blankTileCol = 2;
+        hintImage.src = newSrc.replace('-hint', '-slide'); // Update hint image source if needed
+        resetTimerAndMoves(); // Reset timer and moves
     }
+       
 
     function shuffle() {
         for (let i = 0; i < 100; i++) {
