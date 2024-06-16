@@ -122,6 +122,15 @@ document.addEventListener("DOMContentLoaded", function () {
         timerDisplay.textContent = '00:00';
     }
 
+    function resetTimerAndMoves() {
+        clearInterval(timerInterval);
+        seconds = 0;
+        minutes = 0;
+        timerDisplay.textContent = '00:00';
+        moves = 0;
+        movesDisplay.textContent = moves;
+    }
+
     function isSolved() {
         for (let i = 0; i < tiles.length; i++) {
             if (tiles[i].textContent !== solution[i]) {
@@ -178,6 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
         option.addEventListener('click', function () {
             const newPuzzleSrc = option.getAttribute('src');
             updatePuzzle(newPuzzleSrc);
+            resetTimerAndMoves();
             puzzleSelectModal.style.display = "none";
         });
     });
@@ -273,12 +283,6 @@ document.addEventListener("DOMContentLoaded", function () {
     hintModal.addEventListener("click", function (event) {
         if (event.target === hintModal || event.target.tagName === 'IMG') {
             hintModal.style.display = "none";
-        }
-    });
-
-    window.addEventListener("click", function (event) {
-        if (event.target === infoModal) {
-            infoModal.style.display = "none";
         }
     });
 
