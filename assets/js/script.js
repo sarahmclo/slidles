@@ -1,56 +1,23 @@
-// Wait for DOM content to load
 document.addEventListener("DOMContentLoaded", function () {
-
-    // Switch Button
     const switchButton = document.querySelector('.switchButton');
     const puzzleSelectModal = document.getElementById('puzzleSelectModal');
-
-    switchButton.addEventListener('click', function () {
-        puzzleSelectModal.style.display = "block";
-    });
-
-    // Puzzle Selection Modal
     const puzzleOptions = document.querySelectorAll('.puzzle-option');
     const hintImage = document.getElementById('hintImage');
-
-    puzzleOptions.forEach(option => {
-        option.addEventListener('click', function () {
-            const newPuzzleSrc = option.getAttribute('src');
-            updatePuzzle(newPuzzleSrc);
-            puzzleSelectModal.style.display = "none";
-        });
-    });
-
-    function updatePuzzle(newSrc) {
-        const tiles = document.querySelectorAll('.tile');
-        tiles.forEach((tile, index) => {
-            tile.style.backgroundImage = `url(${newSrc})`;
-        });
-        // Replace 'black-hint.webp' with 'black-slidle.webp' in the hint image source
-        hintImage.src = newSrc.replace('-hint', '-slidle');
-    }
-
-    // Close Modal
     const closeButtons = document.querySelectorAll('.modal .close');
-    closeButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            button.parentElement.parentElement.style.display = "none";
-        });
-    });
-
-    // Close modal on outside click
-    window.addEventListener("click", function (event) {
-        if (event.target.classList.contains('modal')) {
-            event.target.style.display = "none";
-        }
-    });
-
     const playButton = document.querySelector('.playButton');
     const tiles = document.querySelectorAll('.tile');
     const timerDisplay = document.getElementById('timer');
     const movesDisplay = document.getElementById('moves');
-    const audio = document.getElementById('slide-click-sound');
     const solution = ["1", "2", "3", "4", "5", "6", "7", "8", ""];
+    const hintButton = document.querySelector(".hintButton");
+    const hintModal = document.getElementById("hintModal");
+    const infoModal = document.getElementById("myModal");
+    const infoButton = document.getElementById("info-modal");
+    const infoCloseButton = document.getElementsByClassName("close")[0];
+    const winModal = document.getElementById("winModal");
+    const winCloseButton = winModal.getElementsByClassName("close")[0];
+    const audioModal = document.getElementById("audioModal");
+    const resumeButton = document.getElementById("resumeButton");
 
     let moves = 0;
     let timerInterval;
@@ -59,6 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let gameStarted = false;
     let blankTileRow = 2;
     let blankTileCol = 2;
+
+    function updatePuzzle(newSrc) {
+        tiles.forEach((tile, index) => {
+            tile.style.backgroundImage = `url(${newSrc})`;
+        });
+        hintImage.src = newSrc.replace('-hint', '-slidle');
+    }
 
     function shuffle() {
         for (let i = 0; i < 100; i++) {
@@ -157,6 +131,69 @@ document.addEventListener("DOMContentLoaded", function () {
         return true;
     }
 
+    function puzzleSolved() {
+        const jsConfetti = new JSConfetti();
+        jsConfetti.addConfetti({
+            confettiColors: [
+                '#F3A0BC', '#A8CD6E', '#F2DD4E', '#87AAD0', '#FCBE4F', '#FF69B4', '#FFFFFF',
+            ],
+        });
+        const winSound = document.getElementById("win-sound");
+        winSound.currentTime = 0;
+        winSound.play();
+    }
+
+    function togglePlay() {
+        audioModal.style.display = "block";
+    }
+
+    function resumeSettings() {
+        const music = document.getElementById("music");
+        const slideClickSound = document.getElementById("slide-click-sound");
+        const winSound = document.getElementById("win-sound");
+
+        const musicToggle = document.getElementById("music-toggle").checked;
+        const sfxToggle = document.getElementById("sfx-toggle").checked;
+
+        if (musicToggle) {
+            music.play();
+            document.getElementById("volume-icon").src = "assets/images/vol-on.webp";
+        } else {
+            music.pause();
+            music.currentTime = 0;
+            document.getElementById("volume-icon").src = "assets/images/vol-off.webp";
+        }
+
+        slideClickSound.muted = !sfxToggle;
+        winSound.muted = !sfxToggle;
+
+        audioModal.style.display = "none";
+    }
+
+    switchButton.addEventListener('click', function () {
+        puzzleSelectModal.style.display = "block";
+    });
+
+    puzzleOptions.forEach(option => {
+        option.addEventListener('click', function () {
+            const newPuzzleSrc = option.getAttribute('src');
+            updatePuzzle(newPuzzleSrc);
+            puzzleSelectModal.style.display = "none";
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            button.closest('.modal').style.display = "none";
+        });
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target === hintModal) {
+            hintModal.style.display = "none";
+        }
+    });
+
     tiles.forEach((tile, index) => {
         tile.addEventListener('click', () => {
             const row = Math.floor(index / 3);
@@ -185,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
         resetGame();
         shuffle();
         gameStarted = true;
-        document.getElementById("winModal").style.display = "none";
+        winModal.style.display = "none";
         timerInterval = setInterval(() => {
             seconds++;
             if (seconds === 60) {
@@ -196,81 +233,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000);
     });
 
-    /** Audio */
-    // Sfx
     document.addEventListener('DOMContentLoaded', function() {
-        // Select the button element or any other element to trigger the audio playback
         const playButton = document.getElementById('play-button');
-
-        // Define the Howl instance
         const SlideClicksound = new Howl({ 
             src: ['assets/audio/slide-click.mp3', 'assets/audio/615099__mlaudio__magic_game_win_success.wav'], 
             preload: true
         });
 
-        // Add click event listener to the button
         playButton.addEventListener('click', function() {
-            // Start playing the audio after the user clicks the button
             SlideClicksound.play();
         });
     });
 
-    // Toggle on/off - adapted in codepen from tutorial https://stackoverflow.com/questions/55018585/how-to-turn-on-audio-on-click-icon-play-pause
-    // Assign togglePlay function to onclick events of vol-icon a (adapted from: https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link)
-    function togglePlay() {
-        let modal = document.getElementById("audioModal");
-        modal.style.display = "block";
-    }
-
-    function resumeSettings() {
-        let music = document.getElementById("music");
-        let slideClickSound = document.getElementById("slide-click-sound");
-        let winSound = document.getElementById("win-sound");
-
-        let musicToggle = document.getElementById("music-toggle").checked;
-        let sfxToggle = document.getElementById("sfx-toggle").checked;
-
-        if (musicToggle) {
-            music.play();
-            document.getElementById("volume-icon").src = "assets/images/vol-on.webp";
-        } else {
-            music.pause();
-            music.currentTime = 0;
-            document.getElementById("volume-icon").src = "assets/images/vol-off.webp";
-        }
-
-        slideClickSound.muted = !sfxToggle;
-        winSound.muted = !sfxToggle;
-
-        // Hide after applying
-        document.getElementById("audioModal").style.display = "none";
-
-        audio.addEventListener('load', function () {
-            audio.play();
-        });
-    }
-
     window.onload = function () {
-        let applyBtn = document.getElementById("resumeButton");
-
         document.getElementById("volume-icon").onclick = togglePlay;
-        applyBtn.onclick = resumeSettings;
+        resumeButton.onclick = resumeSettings;
 
-        let slideClickSound = document.getElementById("slide-click-sound");
+        const slideClickSound = document.getElementById("slide-click-sound");
         slideClickSound.muted = true;
         slideClickSound.currentTime = 0;
 
-        let winSound = document.getElementById("win-sound");
+        const winSound = document.getElementById("win-sound");
         winSound.muted = true;
         winSound.currentTime = 0;
-
-        document.getElementById("volume-icon").onclick = togglePlay;
     };
-    
-    // Info Modal
-    const infoModal = document.getElementById("myModal");
-    const infoButton = document.getElementById("info-modal");
-    const infoCloseButton = document.getElementsByClassName("close")[0];
 
     infoButton.onclick = function () {
         infoModal.style.display = "block";
@@ -279,10 +265,6 @@ document.addEventListener("DOMContentLoaded", function () {
     infoCloseButton.onclick = function () {
         infoModal.style.display = "none";
     };
-
-    // Hint Button
-    const hintButton = document.querySelector(".hintButton");
-    const hintModal = document.getElementById("hintModal");
 
     hintButton.addEventListener("click", function () {
         hintModal.style.display = "block";
@@ -294,31 +276,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Close modals on overlay click (continued)
     window.addEventListener("click", function (event) {
         if (event.target === infoModal) {
             infoModal.style.display = "none";
         }
-        if (event.target === hintModal) {
-            hintModal.style.display = "none";
-        }
-        const winModal = document.getElementById("winModal");
-        const winCloseButton = winModal.getElementsByClassName("close")[0];
-        winCloseButton.onclick = function () {
-            winModal.style.display = "none";
-        };
     });
 
-    // Puzzle solved confetti animation
-    function puzzleSolved() {
-        const jsConfetti = new JSConfetti();
-        jsConfetti.addConfetti({
-            confettiColors: [
-                '#F3A0BC', '#A8CD6E', '#F2DD4E', '#87AAD0', '#FCBE4F', '#FF69B4', '#FFFFFF',
-            ],
-        });
-        const winSound = document.getElementById("win-sound");
-        winSound.currentTime = 0;
-        winSound.play();
-    }
-});    
+    winCloseButton.onclick = function () {
+        winModal.style.display = "none";
+    };
+});
