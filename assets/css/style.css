@@ -257,7 +257,7 @@ ol li {
     cursor: default;
 }
 
-/* CSS for puzzle options */
+/* Puzzle switch options */
 .puzzle-option {
     border: 1px solid;
     cursor: pointer;
@@ -273,12 +273,14 @@ ol li {
     padding: 5px;
 }
 
-.playButton-container,
-.hintButton-container,
-.switchButton-container {
+.playButton-container {
     margin-bottom: 10px;
+}
+
+.hintButton-switchButton-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 10px;
 }
 
 .playButton,
