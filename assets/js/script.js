@@ -191,10 +191,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         audioModal.style.display = "none";
     }
-
+/*
     switchButton.addEventListener('click', function () {
         puzzleSelectModal.style.display = "block";
     });
+*/
 
     puzzleOptions.forEach(option => {
         option.addEventListener('click', function () {
